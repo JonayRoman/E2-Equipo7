@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
+from .views import EmpleadoListView
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('/', EmpleadoListView.as_view(), name='index')
 ]
