@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
-from .views import EmpleadoListView
+from .views import EmpleadoListView, EmpleadoCreateView
 
 urlpatterns = [
-    path('/', EmpleadoListView.as_view(), name='index')
+    path('/empleados', EmpleadoListView.as_view(), name='index'),
+    path('/empleados/create', EmpleadoCreateView.as_view(), name='empleado_create'),
 ]

@@ -1,0 +1,246 @@
+/*Para concretar las medidas que queremos y no nos afecte lo que tienen los navegadores por defecto*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1rem son 10 pixeles*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Globales*/
+
+/*El tipo de letra para todo el body de la pagina web*/
+body {
+  font-family: sans-serif;
+}
+
+/*Para que las imagenes no se extiendan mas que el ancho del su respectivo contenedor*/
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*El tipo de letra para todos lod h1, h2 y h3 de la pagina web*/
+h1,
+h2,
+h3 {
+  font-family: sans-serif;
+}
+
+/*El tamaño de letra de los h1 para los 3 tipos de medida*/
+h1 {
+  font-size: 5rem;
+}
+
+@media (min-width:768px) and (max-width:1278px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width:767px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/*Tamaño de letra de los h2 de la pagina*/
+h2 {
+  font-size: 3rem;
+}
+
+/*Tamaño de letra de los h3 de la pagina*/
+h3 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;
+}
+
+/*Quitar el subrayado, poner la letra en negro y dar tamaño de letra a todos los enlaces para los 3 tipos de medida*/
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.6rem;
+}
+
+@media (min-width:768px) and (max-width:1278px) {
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+/*HEADER*/
+
+/*Parte de arriba*/
+
+/*Darle el color a todo el header*/
+header {
+  background-color: white;
+}
+
+/*Estilos del contendor donde van los enlaces de inicio de sesion y registrarse*/
+.sesion {
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/*Estilos para cuando se accede a la pagina desde una pantalla mas pequeña, entre 768 y 1278px en horizontal*/
+@media (min-width:768px) and (max-width:1278px) {
+
+  .sesion {
+    flex: 40%;
+  }
+}
+
+/*Estilos para cuando se accede a la pagina desde una pantalla mas pequeña, de menos de 767px en horizontal*/
+@media (max-width:767px) {
+
+  .sesion {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/*Estilos para los enlaces de iniciar sesion y registrarse*/
+.sesion a {
+  color: white;
+  margin: 1rem;
+}
+
+/*Logo y carro*/
+
+/*Estilos para el div donde estan el logo, el nombre y el carrito de la compra*/
+.imagen-titulo {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/*Estilos para el logo de la empresa*/
+.imagen-titulo img {
+  height: 10rem;
+  width: 12rem;
+  margin-right: 1.5rem;
+}
+
+/*Dar color al titulo h1*/
+.imagen-titulo h1 {
+  color: #01b0bf;
+}
+
+/*Estilos para el enlace de tu compra*/
+.imagen-titulo a {
+  font-size: 2rem;
+  color: #01b0bf;
+}
+
+/*Estilos para ver el logo, el titulo h1 y el carrito diferente cuando la longitud de la pantalla sea de entre 768px y 1278px*/
+@media (min-width:768px) and (max-width:1278px) {
+  .imagen-titulo {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+
+/*Estilos para ver el logo, el titulo h1 y el carrito diferente cuando la longitud de la pantalla sea de menos de 767px*/
+@media (max-width:767px) {
+  .imagen-titulo {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagen-titulo img {
+    height: 8rem;
+    width: 10rem;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+  }
+
+}
+
+/*Enlaces de navegacion*/
+
+/*Dar separacion entre el logo y titulo, con respecto a los enlaces*/
+.contenedor-navegacion {
+  padding-top: 1rem;
+}
+
+/*Estilos para el nav donde estan todos los enlaces*/
+.nav-principal {
+  width: 75%;
+  margin: 0 auto;
+  padding: 2rem 0 3.5rem 7rem;
+  display: flex;
+}
+
+/*Estilos para los enlaces de dentro del nav*/
+.nav-principal a {
+  margin-left: 3.5rem;
+  color: #01b0bf;
+}
+
+/*Estilos para los logos situados a la derecha de cada enlace*/
+.nav-principal i {
+  color: #01b0bf;
+}
+
+/*Hacer los enlaces mas grandes cuando el raton se queda parado encima de cada uno de ellos*/
+.nav-principal a:hover {
+  font-size: 1.7rem;
+}
+
+/*Poner un borde que separe el header y los enlaces con el contenido de esta pagina en concreto*/
+.separador {
+  border-bottom: 0.1rem solid #01b0bf;
+}
+
+/*Estilos para los enlaces cuando la longitud horizontal de la pantalla esta entre 768px y 1278px*/
+@media (min-width:768px) and (max-width:1278px) {
+  .nav-principal {
+    width: 80%;
+    padding: 2rem 0 3.5rem 0;
+  }
+
+  .nav-principal a {
+    margin-left: 1rem;
+  }
+
+  .nav-principal i {
+    display: none;
+  }
+}
+
+/*Estilos para los enlaces cuando la longitud horizontal de la pantalla ees de 767px*/
+@media (max-width:767px) {
+
+  .contenedor-navegacion {
+    overflow-x: hidden;
+  }
+
+  .nav-principal {
+    width: 90%;
+    padding: 2rem 0 3.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-principal i {
+    display: none;
+  }
+
+  .nav-principal a {
+    margin: 0 1rem;
+  }
+}

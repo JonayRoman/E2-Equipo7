@@ -11,7 +11,45 @@
 </head>
 <body>
     <div id="content">
-        <h1>Pagina principal (empleados)</h1>
+        <header>
+
+        <!--Contenedor donde van el logo y nombre de la empresa, y el carrito donde van los articulos a comprar-->
+        <div class="imagen-titulo">
+
+            <img src="" alt="Logo de la empresa">
+            <h1>Deustubular S.L.</h1>
+
+            <div class="parte_derecha">
+                <!--Contenedor donde se situan los enlaces de iniciar sesion y registrarse-->
+                <div class="sesion">
+                    <a href="#"><strong>variable_Nombre_Empleado</strong></a>
+                    <a href="#"><strong>Cerrar sesión</strong></a>
+                </div>
+
+                 <div class="buscador">
+                     <input type="text">
+                     <input type="submit" value="Buscar" class="input-filtrar">
+                </div>
+            </div>
+        </div>
+
+        </header>
+
+        <!--Contenedor donde se encuentran todos los enlaces para navegar por las diferentes paginas-->
+        <div class="contenedor-navegacion">
+
+            <!--Nav donde se encuentran todos los enlaces para navegar por las diferentes paginas-->
+            <nav class="nav-principal">
+                <a href="#">Empleados</a>
+                <a href="#">Procesos</a>
+                <a href="#">Equipos</a>
+                <a href="#">Órdenes</a>
+            </nav>
+
+            <!--Contenedor utilizado darle un borde inferior como separador del contenido principal de la pagina-->
+            <div class="separador"></div>
+
+        </div>
 
         {% block contenido %}{% endblock %}
     </div>

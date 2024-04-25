@@ -1,12 +1,35 @@
 {% extends 'base.html' %}
 {% block contenido %}
         <h2>Listado de empleados</h2>
+    <p>Crear un empleado:</p>
+    <p><a href="{% url 'empleado_create' %}">Crear un empleado</a></p>
+
         {% if empleados %}
-            <ul>
-                {% for empleado in empleados %}
-                	<li>{{ empleado.nombre }} {{ empleado.apellido }}</li>
-                {% endfor %}
-            </ul>
+
+            <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>DNI</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for empleado in empleados %}
+                	            <tr>
+                                    <td>{{ empleado.dni }}</td>
+                                    <td>{{ empleado.nombre }}</td>
+                                    <td>{{ empleado.apellido }}</td>
+                                    <td>{{ empleado.email }}</td>
+                                    <td>{{ empleado.telefono }}</td>
+                                </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+
         {% else %}
             <p>No hay empleados creados.</p>
         {% endif %}
