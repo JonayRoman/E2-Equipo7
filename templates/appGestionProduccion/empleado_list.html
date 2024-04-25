@@ -24,11 +24,17 @@
                                     <td>{{ empleado.apellido }}</td>
                                     <td>{{ empleado.email }}</td>
                                     <td>{{ empleado.telefono }}</td>
+                                    <td><a href="{% url 'empleados_update' empleado.id %}">Actualizar</a></td>
+                                    <td>
+                                        <form method="POST" action="{% url "empleados_delete" empleado.id%}">
+                                            {% csrf_token %}
+                                            <input type="submit" value="Eliminar">
+                                        </form>
+                                    </td>
                                 </tr>
                             {% endfor %}
-
                         </tbody>
-                    </table>
+            </table>
 
         {% else %}
             <p>No hay empleados creados.</p>

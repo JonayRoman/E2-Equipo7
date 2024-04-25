@@ -32,12 +32,12 @@ h3 {
 
 /*El tamaño de letra de los h1 para los 3 tipos de medida*/
 h1 {
-  font-size: 5rem;
+  font-size: 7rem;
 }
 
 @media (min-width:768px) and (max-width:1278px) {
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
@@ -76,49 +76,30 @@ a {
 /*Parte de arriba*/
 
 /*Darle el color a todo el header*/
-header {
+.header {
   background-color: white;
 }
 
-/*Estilos del contendor donde van los enlaces de inicio de sesion y registrarse*/
 .sesion {
   display: flex;
-  color: white;
   justify-content: flex-end;
-  flex: 1;
-}
-
-/*Estilos para cuando se accede a la pagina desde una pantalla mas pequeña, entre 768 y 1278px en horizontal*/
-@media (min-width:768px) and (max-width:1278px) {
-
-  .sesion {
-    flex: 40%;
-  }
-}
-
-/*Estilos para cuando se accede a la pagina desde una pantalla mas pequeña, de menos de 767px en horizontal*/
-@media (max-width:767px) {
-
-  .sesion {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 /*Estilos para los enlaces de iniciar sesion y registrarse*/
 .sesion a {
-  color: white;
+  color: black;
   margin: 1rem;
+  font-size: 1.2rem;
 }
 
-/*Logo y carro*/
+/*Logo*/
 
 /*Estilos para el div donde estan el logo, el nombre y el carrito de la compra*/
 .imagen-titulo {
-  width: 75%;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  background-color: red;
 }
 
 /*Estilos para el logo de la empresa*/
@@ -130,12 +111,6 @@ header {
 
 /*Dar color al titulo h1*/
 .imagen-titulo h1 {
-  color: #01b0bf;
-}
-
-/*Estilos para el enlace de tu compra*/
-.imagen-titulo a {
-  font-size: 2rem;
   color: #01b0bf;
 }
 
@@ -169,6 +144,15 @@ header {
 
 }
 
+/*Barra de buscar*/
+.buscador {
+  margin-left: 20rem;
+}
+
+.boton-input {
+  margin-left: -0.7rem;
+}
+
 /*Enlaces de navegacion*/
 
 /*Dar separacion entre el logo y titulo, con respecto a los enlaces*/
@@ -180,8 +164,9 @@ header {
 .nav-principal {
   width: 75%;
   margin: 0 auto;
-  padding: 2rem 0 3.5rem 7rem;
+  padding: 5rem 0 3.5rem 7rem;
   display: flex;
+  background-color: purple;
 }
 
 /*Estilos para los enlaces de dentro del nav*/

@@ -54,7 +54,7 @@ class Proceso(models.Model):
     equipo = models.ForeignKey(Equipo, on_delete=models.CASCADE)
     fecha_inicio = models.DateField()
     fecha_fin = models.DateField()
-    empleados_asignados = models.ManyToManyField(Empleado)
+    empleado_asignados = models.ManyToManyField(Empleado)
     created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, blank=True, null=True)
 
