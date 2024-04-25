@@ -12,22 +12,21 @@
 <body>
     <div id="content">
         <header>
-
-            <div class="sesion">
-                    <a href="#"><strong>Cerrar sesión</strong></a>
-            </div>
-
-        <!--Contenedor donde van el logo y nombre de la empresa, y el carrito donde van los articulos a comprar-->
-            <div class="imagen-titulo">
-
-                <img src="" alt="Logo de la empresa">
-                <h1>Deustubular S.L.</h1>
-                <div class="buscador">
+            <div class="header-buscador-sesion">
+                <div class="header-buscador">
                     <input type="text">
                     <input type="submit" value="Buscar" class="boton-input">
                 </div>
+                <div class="header-sesion">
+                    <a href="#"><strong>Cerrar sesión</strong></a>
+                </div>
+            </div>
 
-        </div>
+            <!--Contenedor donde van el logo y nombre de la empresa, y el carrito donde van los articulos a comprar-->
+            <div class="imagen-titulo">
+                <img src="descarga.jfif" alt="Logo de la empresa">
+                <h1>Deustubular S.L.</h1>
+            </div>
 
         </header>
 
@@ -41,10 +40,6 @@
                 <a href="#">Equipos</a>
                 <a href="#">Órdenes</a>
             </nav>
-
-            <!--Contenedor utilizado darle un borde inferior como separador del contenido principal de la pagina-->
-            <div class="separador"></div>
-
         </div>
 
         {% block contenido %}{% endblock %}
