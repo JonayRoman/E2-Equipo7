@@ -13,9 +13,10 @@ html {
 
 /*Globales*/
 
-/*El tipo de letra para todo el body de la pagina web*/
-body {
+
+#fondo-body {
     font-family: sans-serif;
+    background: radial-gradient(circle, #ffffff, #cfd9e5);
 }
 
 /*Para que las imagenes no se extiendan mas que el ancho del su respectivo contenedor*/
@@ -65,16 +66,13 @@ a {
 /*Parte de arriba*/
 
 /*Darle el color a todo el header*/
-.header {
-    background-color: white;
-}
 
 .header-buscador-sesion {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: #01b0bf;
+    background-color: #8da2ad;
     height: 3rem;
     margin-bottom: 2rem;
 
@@ -93,7 +91,7 @@ a {
 /*Estilos para los enlaces de iniciar sesion y registrarse*/
 .header-sesion a {
     color: black;
-    margin: 1rem;
+    margin: 0 3rem 0 1rem;
     font-size: 1.3rem;
 }
 
@@ -111,14 +109,13 @@ a {
 
 /*Estilos para el logo de la empresa*/
 .imagen-titulo img {
-    height: 10rem;
-    width: auto;
-    margin-right: 1.5rem;
+    height: 14rem;
+    width: 14rem;
 }
 
 /*Dar color al titulo h1*/
 .imagen-titulo h1 {
-    color: #01b0bf;
+    color: #8da2ad;
 }
 
 /*Barra de buscar*/
@@ -128,12 +125,11 @@ a {
     align-items: center;
 }
 
-
 /*Enlaces de navegacion*/
 
 /*Dar separacion entre el logo y titulo, con respecto a los enlaces*/
 .contenedor-navegacion {
-    border-bottom: 0.1rem solid #01b0bf;
+    border-bottom: 0.1rem solid #8da2ad;
     height: 6rem;
 }
 
@@ -153,17 +149,15 @@ a {
     width: 100%; /* Ocupar el 100% del ancho del padre */
     text-align: center; /* Centrar el texto horizontalmente */
     margin: 0.5rem 0; /* Agregar la misma separación entre los enlaces */
-    color: #01b0bf;
+    color: #8da2ad;
 }
 
 /*Estilos para los logos situados a la derecha de cada enlace*/
 .nav-principal i {
-    color: #01b0bf;
+    color: #8da2ad;
 }
 
 /*Hacer los enlaces mas grandes cuando el raton se queda parado encima de cada uno de ellos*/
 .nav-principal a:hover {
     font-size: 1.7rem;
 }
-
-

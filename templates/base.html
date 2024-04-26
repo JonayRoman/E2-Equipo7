@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block titulo %}TITULO DE ARRIBA{% endblock %}</title>
 </head>
-<body>
+<body id="fondo-body">
     <div id="content">
         <header>
             <div class="header-buscador-sesion">
@@ -24,9 +24,10 @@
 
             <!--Contenedor donde van el logo y nombre de la empresa, y el carrito donde van los articulos a comprar-->
             <div class="imagen-titulo">
-                <img src="descarga.jfif" alt="Logo de la empresa">
+                <img src="{% static 'images/logoEmpresa.png' %}" alt="Logo de la empresa">
                 <h1>Deustubular S.L.</h1>
             </div>
+
 
         </header>
 
@@ -35,7 +36,7 @@
 
             <!--Nav donde se encuentran todos los enlaces para navegar por las diferentes paginas-->
             <nav class="nav-principal">
-                <a href="#">Empleados</a>
+                <a href="{% url 'empleado_list' %}">Empleados</a>
                 <a href="#">Procesos</a>
                 <a href="#">Equipos</a>
                 <a href="#">Órdenes</a>

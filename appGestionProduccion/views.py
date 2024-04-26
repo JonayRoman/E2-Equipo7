@@ -49,7 +49,7 @@ class EmpleadoUpdateView(UpdateView):
         formulario = EmpleadoForm(request.POST, instance=empleado)
         if formulario.is_valid():
             formulario.save()
-            return redirect('empleado_list', empleado.id)
+            return redirect('empleado_list')
         else:
             formulario = EmpleadoForm(instance=empleado)
         return render(request, 'appGestionProduccion/empleado_update.html', {'formulario': formulario})
