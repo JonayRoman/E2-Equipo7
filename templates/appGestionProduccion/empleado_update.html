@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block contenido %}
-    <h2>Editar un empelado</h2>
+    <h2>Editar un empleado</h2>
     <form action="{% url 'empleados_update' empleado.id%}" method="post">
         {% csrf_token %}
         {{ formulario.errors }}
         {{ formulario.as_ul }}
-        <input type="submit" value="Editar empeleado"/>
+        <input type="submit" value="Editar empleado"/>
     </form>
 
 {% endblock %}
