@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 {% block contenido %}
-        <h2>Listado de empleados</h2>
-    <p>Crear un empleado:</p>
-    <p><a href="{% url 'empleado_create' %}">Crear un empleado</a></p>
+    <h2>Listado de empleados</h2>
 
         {% if empleados %}
-
             <table class="tabla">
                         <thead>
                             <tr>
@@ -14,6 +11,7 @@
                                 <th>Apellido</th>
                                 <th>Email</th>
                                 <th>Teléfono</th>
+                               <th colspan="2"><a href="{% url 'empleado_create' %}" class="boton-enlace">Crear un empleado</a></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -24,11 +22,11 @@
                                     <td>{{ empleado.apellido }}</td>
                                     <td>{{ empleado.email }}</td>
                                     <td>{{ empleado.telefono }}</td>
-                                    <td><a href="{% url 'empleados_update' empleado.id %}">Actualizar</a></td>
+                                    <td><a href="{% url 'empleados_update' empleado.id %}" class="boton-enlace">Actualizar</a></td>
                                     <td>
                                         <form method="POST" action="{% url "empleados_delete" empleado.id%}">
                                             {% csrf_token %}
-                                            <input type="submit" value="Eliminar">
+                                            <input class="boton-eliminar" type="submit" value="Eliminar">
                                         </form>
                                     </td>
                                 </tr>

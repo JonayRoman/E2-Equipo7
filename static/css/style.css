@@ -14,7 +14,7 @@ html {
 /*Globales*/
 
 /*El tipo de letra para todo el body de la pagina web*/
-#fondo {
+#fondo-body {
     font-family: sans-serif;
     background: radial-gradient(circle, #ffffff, #cfd9e5);
 }
@@ -40,6 +40,8 @@ h1 {
 /*Tamaño de letra de los h2 de la pagina*/
 h2 {
     font-size: 3rem;
+    color: #8da2ad;
+    text-align: center;
 }
 
 /*Tamaño de letra de los h3 de la pagina*/
@@ -172,6 +174,7 @@ a {
 footer {
     background-color: #f5f5f5;
     margin-top: 2rem;
+    border-top: 0.2rem solid #8da2ad;
 }
 
 /*Darle una longitud horizontal de 75% para centrar ahi los elementos del footer*/
@@ -293,4 +296,78 @@ footer {
     margin-left: 2.5rem;
 }
 
+/*Estilos para las tablas*/
 
+table {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.tabla th,
+.tabla td {
+    border: 1px solid #8da2ad;
+    padding: 1rem;
+}
+
+.tabla th {
+    font-size: 1.3rem;
+}
+
+.tabla td {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.boton-enlace {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: #8da2ad;
+    color: #e3e5ea;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+     border: 1px solid black;
+}
+
+.boton-eliminar {
+    background-color: #8da2ad;
+    color: #e3e5ea;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+/*Formularios*/
+
+.div-formulario {
+    width: 80%;
+    margin: 0 auto;
+    display: flex; /* Convertir el contenedor en un contenedor flexible */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+}
+
+.formulario  {
+    width: 45%;
+}
+
+.formulario label {
+    font-size: 2.2rem; /* Ajusta el tamaño de la fuente de las etiquetas */
+    list-style-type: none; /* Elimina el punto negro de la izquierda */
+    color: #8da2ad;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+    border: 1px solid #8da2ad;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.formulario input[type="submit"] {
+    align-self: flex-end; /* El botón se alineará al final del formulario */
+}
