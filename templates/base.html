@@ -44,6 +44,83 @@
         </div>
 
         {% block contenido %}{% endblock %}
+
+         <!--Seccion footer de la pagina-->
+        <footer class="footer">
+
+            <!--Contenedor del footer donde estan los enlaces de interes-->
+            <div class="div-footer">
+
+                <!--Contenedor de la izquierda del todo del footer-->
+                <div class="contenedor-footer">
+
+                    <h3> | Sobre La empresa</h3>
+
+                    <!--Contenedor del footer de la izquierda con el logo y el nombre de la empresa-->
+                    <div class="logo-footer">
+
+                        <img src="{% static 'images/logoEmpresa.png' %}" alt="Logo de la empresa">
+                        <h1>Deustubular S.L.</h1>
+
+                    </div>
+
+                    <h4>| Enlaces de interés</h4>
+
+                    <nav class="enlaces-footer">
+                        <a href="#">Intranet Deustubular S.L.</a>
+                        <a href="#">Departamento IT</a>
+                    </nav>
+
+                </div>
+
+                <div class="contenedor-footer">
+
+                    <h3>| Soporte</h3>
+
+                    <div class="contenedor-footer-soporte">
+                        <p>
+                            En caso de existir cualquier fallo, problema o duda
+                            relacionada con la página web, pónganse en contacto con
+                            el departamento IT.
+                            A la derecha encontraréis los tres cotactos de los
+                            encargados del mantenimiento de la página.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contenedor-footer">
+
+                    <h3>| Contacto</h3>
+
+                    <ul>
+                        <li><strong>Jon Tolosa:</strong>
+                            j.tolosa@opendeusto.es</li>
+                        <li><strong>Daniel Pillado:</strong>
+                            daniel.pillado@opendeusto.es</li>
+                        <li><strong>Jonay Román:</strong>
+                            jonay.roman@opendeusto.es</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="div-footer-abajo">
+
+                <!--Contenedor interior con un tamaño horizontal mas reducido que su contenedor padre-->
+                <div class="div-footer-p">
+
+                    <p>© 2024 Deustubular S.L. por Infocoste el Romeral S.L.U. Todos
+                        los derechos reservados.</p>
+
+                    <!--Nav con los enlaces de la derecha-->
+                    <nav class="enlaces-footer-abajo">
+                        <a href="#">Información Legal y Privacidad</a>
+                        <a href="#">Uso de Cookies y Configuración</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
 </body>
