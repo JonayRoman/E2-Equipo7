@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
-from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView
+from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView, ProcesoListView, ProcesoCreateView, ProcesoDeleteView, ProcesoUpdateView
 
 urlpatterns = [
     path('/empleados', EmpleadoListView.as_view(), name='empleado_list'),
     path('/empleados/create', EmpleadoCreateView.as_view(), name='empleado_create'),
     path('/empleados/delete/<int:pk>', EmpleadoDeleteView.as_view(), name='empleados_delete'),
-    path('/empleados/update/<int:pk>', EmpleadoUpdateView.as_view(), name='empleados_update')
+    path('/empleados/update/<int:pk>', EmpleadoUpdateView.as_view(), name='empleados_update'),
+    path('/proceso', ProcesoListView.as_view(), name='proceso_list'),
+    path('/proceso/create', ProcesoCreateView.as_view(), name='proceso_create'),
+    path('/proceos/delete/<int:pk>', ProcesoDeleteView.as_view(), name='proceso_delete'),
+    path('/proeso/update/<int:pk>', ProcesoUpdateView.as_view(), name='proceso_update')
 ]
