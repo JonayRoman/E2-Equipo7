@@ -37,6 +37,18 @@ h1 {
     font-size: 8rem;
 }
 
+@media (min-width:768px) and (max-width:1278px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width:767px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
 /*Tamaño de letra de los h2 de la pagina*/
 h2 {
     font-size: 3rem;
@@ -113,6 +125,13 @@ a {
 .imagen-titulo img {
     height: 14rem;
     width: 14rem;
+}
+
+@media (max-width:767px) {
+  .imagen-titulo img {
+    height: 10rem;
+    width: 10rem;
+  }
 }
 
 /*Dar color al titulo h1*/
@@ -252,7 +271,7 @@ footer {
 }
 
 .contenedor-footer ul {
-    padding-left: 0.8rem; /* Elimina el relleno predeterminado de la lista */
+    padding-left: 0.8rem;
     margin-left: 0.3rem;
     margin-top: 0.5rem;
 }
@@ -261,6 +280,46 @@ footer {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     white-space: nowrap;
+}
+
+@media (min-width:768px) and (max-width:1278px) {
+  .div-footer {
+    width: 90%;
+  }
+
+  .contenedor-footer {
+    margin-left: 0.2rem;
+  }
+
+  .contenedor-footer img {
+    display: none;
+  }
+
+  .logo-footer h1 {
+    font-size: 2rem;
+  }
+
+  .contenedor-footer-soporte {
+    width: 85%;
+  }
+
+  .contenedor-footer li {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width:767px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .div-footer {
+    flex-wrap: wrap;
+  }
+
+  .contenedor-footer img {
+    display: none;
+  }
 }
 
 /*Footer de abajo del todo de la pagina*/
@@ -307,6 +366,7 @@ table {
 .tabla td {
     border: 1px solid #8da2ad;
     padding: 1rem;
+     width: 25%;
 }
 
 .tabla th {
@@ -333,10 +393,17 @@ table {
     background-color: #8da2ad;
     color: #e3e5ea;
     font-size: 1.5rem;
-    padding: 0.3rem 0.8rem;
+    padding: 0.3rem 0.3rem;
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
+}
+
+.nada-creado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Formularios*/
@@ -397,6 +464,7 @@ form input[type="submit"] {
     border: 1px solid black;
     align-self: flex-end; /* El botón se alineará al final del formulario */
     margin-left: 8rem;
+    margin-top: 1.5rem;
 }
 
 /*Boton para ir a la página de atras*/
@@ -418,3 +486,21 @@ form input[type="submit"] {
     border: 1px solid black;
     margin: 3rem 3rem 0 0;
 }
+
+/*Estilos para la vista detallada*/
+
+.vista-detallada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.vista-detallada strong {
+    font-size: 1.6rem;
+    color: #8da2ad;
+}
+
+
+

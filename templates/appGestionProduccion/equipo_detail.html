@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block contenido %}
+    <div class="div-atras">
+        <a href="{% url 'equipo_list' %}" class="boton-atras"> <i class="fas fa-arrow-left"></i> Atrás </a>
+    </div>
+    <h2>Detalles del equipo {{ equipo.modelo }}</h2>
+    {% if equipo %}
+        <ul class="vista-detallada">
+            <li><strong>Modelo del equipo:</strong> {{ equipo.modelo }}</li>
+            <li><strong>Marca del equipo:</strong> {{ equipo.marca }}</li>
+            <li><strong>tipo del equipo:</strong> {{ equipo.tipo }}</li>
+            <li><strong>Fecha de adquisición del equipo:</strong> {{ equipo.fecha_adquisicion }}</li>
+            <li><strong>Fecha de instalación del equipo:</strong> {{ equipo.fecha_instalacion }}</li>
+        </ul>
+    {% else %}
+        <p>No existe este equipo.</p>
+    {% endif %}
+{% endblock %}

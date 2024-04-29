@@ -22,7 +22,7 @@
                                     <td>{{ empleado.apellido }}</td>
                                     <td>{{ empleado.email }}</td>
                                     <td>{{ empleado.telefono }}</td>
-                                    <td><a href="{% url 'empleados_update' empleado.id %}" class="boton-enlace">Actualizar</a></td>
+                                    <td><a href="{% url 'empleados_update' empleado.id %}" class="boton-enlace">Modificar</a></td>
                                     <td>
                                         <form method="POST" action="{% url "empleados_delete" empleado.id%}">
                                             {% csrf_token %}
@@ -35,6 +35,9 @@
             </table>
 
         {% else %}
-            <p>No hay empleados creados.</p>
+            <div class="nada-creado">
+                <a href="{% url 'empleado_create' %}" class="boton-enlace">Crear un empleado</a>
+                <p>No hay empleados creados</p>
+            </div>
         {% endif %}
 {% endblock %}

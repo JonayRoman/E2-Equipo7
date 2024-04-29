@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% block contenido %}
+    <div class="div-atras">
+        <a href="{% url 'proceso_list' %}" class="boton-atras"> <i class="fas fa-arrow-left"></i> Atrás </a>
+    </div>
     <h2>Editar un proceso</h2>
-    <form action="{% url 'proceso_update' proceso.id%}" method="post">
-        {% csrf_token %}
-        {{ formulario.errors }}
-        {{ formulario.as_ul }}
-        <input type="submit" value="Editar proceso"/>
-    </form>
-
+    <div class="div-formulario">
+        <form action="{% url 'proceso_update' proceso.id%}" method="post">
+            {% csrf_token %}
+            {{ formulario.errors }}
+            {{ formulario.as_ul }}
+             <input type="submit" value="Editar proceso"/>
+        </form>
+    </div>
 {% endblock %}

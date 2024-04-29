@@ -1,6 +1,6 @@
 from django import forms
 
-from appGestionProduccion.models import Empleado, Proceso
+from appGestionProduccion.models import Empleado, Proceso, Equipo
 
 
 class EmpleadoForm(forms.ModelForm):
@@ -11,4 +11,9 @@ class EmpleadoForm(forms.ModelForm):
 class ProcesoForm(forms.ModelForm):
     class Meta:
         model = Proceso
+        fields = '__all__'
+
+class EquipoForm(forms.ModelForm):
+    class Meta:
+        model = Equipo
         fields = '__all__'

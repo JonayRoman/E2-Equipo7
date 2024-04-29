@@ -9,7 +9,7 @@
                                 <th>Código</th>
                                 <th>Nombre</th>
                                 <th>Referencia</th>
-                               <th colspan="3"><a href="{% url 'proceso_create' %}" class="boton-enlace">Crear un proceso</a></th>
+                               <th colspan=3><a href="{% url 'proceso_create' %}" class="boton-enlace">Crear un proceso</a></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -18,7 +18,7 @@
                                     <td>{{ proceso.codigo_proceso }}</td>
                                     <td>{{ proceso.nombre_proceso }}</td>
                                     <td>{{ proceso.referencia }}</td>
-                                    <td><p>visualizar</p></td>
+                                    <td><a href="{% url 'procesos_show' proceso.id %}" class="boton-enlace">Visualizar</a></td>
                                     <td><a href="{% url 'proceso_update' proceso.id %}" class="boton-enlace">Modificar</a></td>
                                     <td>
                                         <form method="POST" action="{% url "proceso_delete" proceso.id%}">
@@ -32,8 +32,9 @@
             </table>
 
         {% else %}
-            <p>No hay procesos creados.</p>
+            <div class="nada-creado">
+                <a href="{% url 'proceso_create' %}" class="boton-enlace">Crear un proceso</a>
+                <p>No hay procesos creados.</p>
+            </div>
         {% endif %}
-
-
 {% endblock %}

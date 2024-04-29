@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block contenido %}
+    <div class="div-atras">
+        <a href="{% url 'proceso_list' %}" class="boton-atras"> <i class="fas fa-arrow-left"></i> Atrás </a>
+    </div>
+    <h2>Detalles del proceso {{ proceso.nombre_proceso }}</h2>
+    {% if proceso %}
+        <ul class="vista-detallada">
+            <li><strong>Código del proceso:</strong> {{ proceso.codigo_proceso }}</li>
+            <li><strong>Nombre del proceso:</strong> {{ proceso.nombre_proceso }}</li>
+            <li><strong>Referencia:</strong> {{ proceso.referencia }}</li>
+            <li><strong>Fecha de inicio del proceso:</strong> {{ proceso.fecha_inicio }}</li>
+            <li><strong>Fecha final estimada:</strong> {{ proceso.fecha_fin }}</li>
+        </ul>
+        <h3>Empleados asociados</h3>
+        {% if empleados %}
+                <ul>
+                    {% for empleado in empleados %}
+                    	<li>
+                            <a href="{% url 'empleados_show_show' empleado.id %}">{{ empleado.nombre }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No tiene empleados asociados.</p>
+            {% endif %}
+    {% else %}
+        <p>No existe este departamento.</p>
+    {% endif %}
+{% endblock %}

@@ -47,13 +47,13 @@ class Equipo(models.Model):
         ordering = ["-created"]
 
 class Proceso(models.Model):
-    referencia_de_fabricacion = models.ForeignKey(Orden_De_fabricacion, on_delete=models.CASCADE, null=True)
     codigo_proceso = models.CharField(max_length=10, unique=True)
     nombre_proceso = models.CharField(max_length=50)
     referencia = models.CharField(max_length=50)
     equipo = models.ForeignKey(Equipo, on_delete=models.CASCADE, null=True)
     fecha_inicio = models.DateField()
     fecha_fin = models.DateField()
+    referencia_de_fabricacion = models.ManyToManyField(Orden_De_fabricacion)
     empleados_asignados = models.ManyToManyField(Empleado)
     created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, blank=True, null=True)

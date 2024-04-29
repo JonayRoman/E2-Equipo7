@@ -1,11 +1,11 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import ListView, DeleteView, UpdateView
+from django.views.generic import ListView, DeleteView, UpdateView, DetailView
 
-from appGestionProduccion.forms import EmpleadoForm, ProcesoForm
-from appGestionProduccion.models import Empleado, Proceso
+from appGestionProduccion.forms import EmpleadoForm, ProcesoForm, EquipoForm
+from appGestionProduccion.models import Empleado, Proceso, Equipo
 
 #Lista de todos los empleados (se ven todos los atributos)
 class EmpleadoListView(ListView):
@@ -100,3 +100,73 @@ class ProcesoUpdateView(UpdateView):
         else:
             formulario = ProcesoForm(instance=proceso)
         return render(request, 'appGestionProduccion/proceso_update.html', {'formulario': formulario})
+
+#2. CBV para ver el detalle de un departamento
+def show_Proceso(request, proceso_id):
+    proceso = get_object_or_404(Proceso, id=proceso_id)
+    empleados = proceso.empleados_asignados.all()
+    return render(request, 'appGestionProduccion/proceso_detail.html', {'proceso':proceso, 'empleados':empleados})
+
+class ProcesoDetailView(DetailView):
+    model = Proceso
+
+def show_empleado(request, empleado_id):
+    empleado = get_object_or_404(Empleado, id=empleado_id)
+    output = (f'Detalles del empleado: {empleado.id}, {empleado.nombre},'
+              f' Empleados :{[e.nombre for e in empleado.proceso_set.all()]}')
+    return HttpResponse(output)
+
+#Listado de equipos
+class EquipoListView(ListView):
+    model = Equipo
+    template_name = "appGestionProduccion/equipo_list.html"
+    context_object_name = "equipos"
+
+#Crear un nuevo equipo
+class EquipoCreateView(View):
+    def get(self, request):
+        formulario = EquipoForm()
+        context = {'formulario': formulario}
+        return render(request, 'appGestionProduccion/equipo_create.html', context)
+
+    def post(self, request):
+        formulario = EquipoForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('equipo_list')
+        return render(request, 'appGestionProduccion/equipo_create.html', {'formulario': formulario})
+
+#Eliminar un equipo
+class EquipoDeleteView(DeleteView):
+    model = Equipo
+    success_url = reverse_lazy('equipo_list')
+
+#Modificar un empleado
+class EquipoUpdateView(UpdateView):
+    model = Equipo
+    def get(self, request, pk):
+        equipo = Equipo.objects.get(id=pk)
+        formulario = EquipoForm( instance=equipo)
+        context = {
+            'formulario': formulario,
+            'empleado': equipo
+        }
+        return render(request, 'appGestionProduccion/equipo_update.html', context)
+    # Llamada para procesar la actualización del empleado
+    def post(self, request, pk):
+        equipo = Empleado.objects.get(id= pk)
+        formulario = EquipoForm(request.POST, instance=equipo)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('equipo_list')
+        else:
+            formulario = EquipoForm(instance=equipo)
+        return render(request, 'appGestionProduccion/equipo_update.html', {'formulario': formulario})
+
+#vista detallada del equipo
+def show_Equipo(request, equipo_id):
+    equipo = get_object_or_404(Proceso, id=equipo_id)
+    return render(request, 'appGestionProduccion/equipo_detail.html', {'equipo':equipo})
+
+class EquipoDetailView(DetailView):
+    model = Equipo

@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
-from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView, ProcesoListView, ProcesoCreateView, ProcesoDeleteView, ProcesoUpdateView
+from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView, ProcesoListView, \
+    ProcesoCreateView, ProcesoDeleteView, ProcesoUpdateView, ProcesoDetailView, EquipoListView, EquipoCreateView, \
+    EquipoDeleteView, EquipoUpdateView, EquipoDetailView
 
 urlpatterns = [
     path('/empleados', EmpleadoListView.as_view(), name='empleado_list'),
@@ -27,4 +29,11 @@ urlpatterns = [
     path('/proceso/create', ProcesoCreateView.as_view(), name='proceso_create'),
     path('/proceos/delete/<int:pk>', ProcesoDeleteView.as_view(), name='proceso_delete'),
     path('/proeso/update/<int:pk>', ProcesoUpdateView.as_view(), name='proceso_update'),
+    path('/proceso/<int:pk>', ProcesoDetailView.as_view(), name='procesos_show'),
+    path('/procesos/<int:empleado_id>', views.show_empleado, name="empleados_show"), #esta mal
+    path('/equipos', EquipoListView.as_view(), name='equipo_list'),
+    path('/equipos/create', EquipoCreateView.as_view(), name='equipo_create'),
+    path('/equipos/delete/<int:pk>', EquipoDeleteView.as_view(), name='equipos_delete'),
+    path('/equipos/update/<int:pk>', EquipoUpdateView.as_view(), name='equipos_update'),
+    path('/equipo/<int:pk>', EquipoDetailView.as_view(), name='equipo_show'),
 ]
