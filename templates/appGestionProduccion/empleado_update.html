@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% block contenido %}
+    <div class="div-atras">
+        <a href="{% url 'empleado_list' %}" class="boton-atras"> <i class="fas fa-arrow-left"></i> Atrás </a>
+    </div>
     <h2>Editar un empleado</h2>
-    <form action="{% url 'empleados_update' empleado.id%}" method="post">
-        {% csrf_token %}
-        {{ formulario.errors }}
-        {{ formulario.as_ul }}
+    <div class="div-formulario">
+        <form class="formulario" action="{% url 'empleados_update' empleado.id%}" method="post">
+            {% csrf_token %}
+            {{ formulario.errors }}
+            {{ formulario.as_ul }}
         <input type="submit" value="Editar empleado"/>
     </form>
+    </div>
 
 {% endblock %}

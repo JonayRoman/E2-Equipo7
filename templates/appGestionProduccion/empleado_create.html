@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% block contenido %}
+    <div class="div-atras">
+        <a href="{% url 'empleado_list' %}" class="boton-atras"> <i class="fas fa-arrow-left"></i> Atrás </a>
+    </div>
     <h2>Nuevo Empleado</h2>
     <div class="div-formulario">
         <form class="formulario" action="{% url 'empleado_create' %}" method="post">
