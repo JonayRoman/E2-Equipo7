@@ -21,20 +21,24 @@ from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, Emp
     EquipoDeleteView, EquipoUpdateView, EquipoDetailView, OrdenListView
 
 urlpatterns = [
-    path('/empleados', EmpleadoListView.as_view(), name='empleado_list'),
-    path('/empleados/create', EmpleadoCreateView.as_view(), name='empleado_create'),
-    path('/empleados/delete/<int:pk>', EmpleadoDeleteView.as_view(), name='empleados_delete'),
-    path('/empleados/update/<int:pk>', EmpleadoUpdateView.as_view(), name='empleados_update'),
-    path('/procesos', ProcesoListView.as_view(), name='proceso_list'),
-    path('/proceso/create', ProcesoCreateView.as_view(), name='proceso_create'),
-    path('/proceos/delete/<int:pk>', ProcesoDeleteView.as_view(), name='proceso_delete'),
-    path('/proeso/update/<int:pk>', ProcesoUpdateView.as_view(), name='proceso_update'),
-    path('/proceso/<int:pk>', ProcesoDetailView.as_view(), name='procesos_show'),
-    path('/procesos/<int:empleado_id>', views.show_empleado, name="empleados_show"), #esta mal
-    path('/equipos', EquipoListView.as_view(), name='equipo_list'),
-    path('/equipos/create', EquipoCreateView.as_view(), name='equipo_create'),
-    path('/equipos/delete/<int:pk>', EquipoDeleteView.as_view(), name='equipos_delete'),
-    path('/equipos/update/<int:pk>', EquipoUpdateView.as_view(), name='equipos_update'),
-    path('/equipo/<int:pk>', EquipoDetailView.as_view(), name='equipo_show'),
-    path('/ordenes', OrdenListView.as_view(), name='orden_list'),
+    #Urls de los empleados
+    path('/empleados', EmpleadoListView.as_view(), name='empleado_list'), #url listar empleados
+    path('/empleados/create', EmpleadoCreateView.as_view(), name='empleado_create'), #url crear empleados
+    path('/empleados/delete/<int:pk>', EmpleadoDeleteView.as_view(), name='empleados_delete'), #url borrar empleados
+    path('/empleados/update/<int:pk>', EmpleadoUpdateView.as_view(), name='empleados_update'), #url modificar empleados
+    #Urls de los procesos
+    path('/procesos', ProcesoListView.as_view(), name='proceso_list'), #url listar procesos
+    path('/proceso/create', ProcesoCreateView.as_view(), name='proceso_create'), #url crear procesos
+    path('/proceos/delete/<int:pk>', ProcesoDeleteView.as_view(), name='proceso_delete'), #url borrar procesos
+    path('/proeso/update/<int:pk>', ProcesoUpdateView.as_view(), name='proceso_update'), #url modificar procesos
+    path('/proceso/<int:pk>', ProcesoDetailView.as_view(), name='procesos_show'), #url vista detallada procesos
+    path('/procesos/<int:empleado_id>', views.show_empleado, name="empleados_show"), #####MAAAAAAAAL######
+    #Urls de los equipos
+    path('/equipos', EquipoListView.as_view(), name='equipo_list'), #url listar equipos
+    path('/equipos/create', EquipoCreateView.as_view(), name='equipo_create'), #url crear equipos
+    path('/equipos/delete/<int:pk>', EquipoDeleteView.as_view(), name='equipos_delete'), #url borrar equipos
+    path('/equipos/update/<int:pk>', EquipoUpdateView.as_view(), name='equipos_update'), #url modificar equipos
+    path('/equipo/<int:pk>', EquipoDetailView.as_view(), name='equipo_show'), #url vista detallada equipos
+    #Urls de las órdenes
+    path('/ordenes', OrdenListView.as_view(), name='orden_list'), #url listar ordenes
 ]

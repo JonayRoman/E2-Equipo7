@@ -55,7 +55,7 @@ class EmpleadoUpdateView(UpdateView):
             formulario = EmpleadoForm(instance=empleado)
         return render(request, 'appGestionProduccion/empleado_update.html', {'formulario': formulario})
     
-#Lista de todos los procesos (se ven todos los atributos)    
+#Lista de todos los procesos
 class ProcesoListView(ListView):
     model = Proceso
     template_name = "appGestionProduccion/proceso_list.html"
@@ -102,12 +102,13 @@ class ProcesoUpdateView(UpdateView):
             formulario = ProcesoForm(instance=proceso)
         return render(request, 'appGestionProduccion/proceso_update.html', {'formulario': formulario})
 
-#2. CBV para ver el detalle de un departamento
+#Ver el detalle de un proceso
 def show_Proceso(request, proceso_id):
     proceso = get_object_or_404(Proceso, id=proceso_id)
     empleados = proceso.empleados_asignados.all()
     return render(request, 'appGestionProduccion/proceso_detail.html', {'proceso':proceso, 'empleados':empleados})
 
+#Ver el detalle de un proceso
 class ProcesoDetailView(DetailView):
     model = Proceso
 
@@ -142,7 +143,7 @@ class EquipoDeleteView(DeleteView):
     model = Equipo
     success_url = reverse_lazy('equipo_list')
 
-#Modificar un empleado
+#Modificar un equipo
 class EquipoUpdateView(UpdateView):
     model = Equipo
     def get(self, request, pk):
@@ -153,7 +154,7 @@ class EquipoUpdateView(UpdateView):
             'empleado': equipo
         }
         return render(request, 'appGestionProduccion/equipo_update.html', context)
-    # Llamada para procesar la actualización del empleado
+    # Llamada para procesar la actualización del equipo
     def post(self, request, pk):
         equipo = Empleado.objects.get(id= pk)
         formulario = EquipoForm(request.POST, instance=equipo)

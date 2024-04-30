@@ -49,14 +49,14 @@ h1 {
   }
 }
 
-/*Tamaño de letra de los h2 de la pagina*/
+/*Estilos de los h2 de la pagina*/
 h2 {
     font-size: 3rem;
     color: #8da2ad;
     text-align: center;
 }
 
-/*Tamaño de letra de los h3 de la pagina*/
+/*Estilos de los h3 de la pagina*/
 h3 {
     font-size: 3rem;
     margin: 0 0 0.5rem 0;
@@ -76,10 +76,6 @@ a {
 }
 
 /*HEADER*/
-
-/*Parte de arriba*/
-
-/*Darle el color a todo el header*/
 
 .header-buscador-sesion {
     width: 100%;
@@ -102,14 +98,11 @@ a {
     margin-right: 1rem;
 }
 
-/*Estilos para los enlaces de iniciar sesion y registrarse*/
 .header-sesion a {
     color: black;
     margin: 0 3rem 0 1rem;
     font-size: 1.3rem;
 }
-
-/*Logo*/
 
 .imagen-titulo {
     display: flex;
@@ -121,7 +114,6 @@ a {
     justify-content: center;
 }
 
-/*Estilos para el logo de la empresa*/
 .imagen-titulo img {
     height: 14rem;
     width: 14rem;
@@ -134,12 +126,10 @@ a {
   }
 }
 
-/*Dar color al titulo h1*/
 .imagen-titulo h1 {
     color: #8da2ad;
 }
 
-/*Barra de buscar*/
 .buscador {
     display: flex;
     flex-direction: row;
@@ -149,13 +139,11 @@ a {
 
 /*Enlaces de navegacion*/
 
-/*Dar separacion entre el logo y titulo, con respecto a los enlaces*/
 .contenedor-navegacion {
     border-bottom: 0.1rem solid #8da2ad;
     height: 6rem;
 }
 
-/*Estilos para el nav donde estan todos los enlaces*/
 .nav-principal {
     width: 80%;
     margin: 0 auto;
@@ -166,44 +154,35 @@ a {
 
 }
 
-/*Estilos para los enlaces de dentro del nav*/
 .nav-principal a {
     width: 100%;
-    /* Ocupar el 100% del ancho del padre */
     text-align: center;
-    /* Centrar el texto horizontalmente */
     margin: 0.5rem 0;
-    /* Agregar la misma separación entre los enlaces */
     color: #8da2ad;
 }
 
-/*Estilos para los logos situados a la derecha de cada enlace*/
 .nav-principal i {
     color: #8da2ad;
 }
 
-/*Hacer los enlaces mas grandes cuando el raton se queda parado encima de cada uno de ellos*/
 .nav-principal a:hover {
     font-size: 1.7rem;
 }
 
 /*FOOTER*/
 
-/*Darle u color de fondo gris y dejar margen con respecto al formulario*/
 footer {
     background-color: #f5f5f5;
     margin-top: 2rem;
     border-top: 0.2rem solid #8da2ad;
 }
 
-/*Darle una longitud horizontal de 75% para centrar ahi los elementos del footer*/
 .div-footer {
     width: 95%;
     margin: 0 auto;
     display: flex;
 }
 
-/*Estilos para los tres contenedores del footer, donde esncuentran los enlaces y demas*/
 .contenedor-footer {
     display: flex;
     flex-direction: column;
@@ -211,33 +190,28 @@ footer {
     margin-left: 5rem;
 }
 
-/*Tamaño y posicion de los titulos h3 */
 .contenedor-footer h3 {
     font-size: 2rem;
     margin-top: 1rem;
 }
 
-/*Tamaño y posicion de las imagenes del footer*/
 .contenedor-footer img {
     margin-top: 1.5rem;
     width: 80%;
 }
 
-/*Estilos para el div donde se encuentra el logo de la empresa y el nombre*/
 .logo-footer {
     display: flex;
     align-items: center;
     height: 5rem;
 }
 
-/*Tamaño y posicion de la imagen del logo de la empresa*/
 .logo-footer img {
     height: 5rem;
     width: 6.5rem;
     margin-right: 1rem;
 }
 
-/*Color y tamaño del titulo h1 del footer con el nombre de la empresa*/
 .logo-footer h1 {
     color: #8da2ad;
     font-size: 2.5rem;
@@ -245,14 +219,12 @@ footer {
     white-space: nowrap;
 }
 
-/*Tamaño de letra y posicion del titulo h4 del div de la izquierda del footer*/
 .contenedor-footer h4 {
     font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
 
-/*Estilos del nav donde estan los enlaces del footer*/
 .enlaces-footer {
     display: flex;
     flex-direction: column;
@@ -324,7 +296,6 @@ footer {
 
 /*Footer de abajo del todo de la pagina*/
 
-/*Estilos para el div donde esta la informacion de abajo del todo de la pagina*/
 .div-footer-abajo {
     background-color: black;
     height: 2.6rem;
@@ -333,7 +304,6 @@ footer {
     margin-top: 1.5rem;
 }
 
-/*Tamaño del div donde esta la informacion de los derechos y los dos enlaces*/
 .div-footer-p {
     width: 80%;
     margin: 0 auto;
@@ -343,14 +313,12 @@ footer {
     align-items: center;
 }
 
-/*Estilos para la letra de la informacion de los derechos y de los dos enlaces*/
 .div-footer-p p,
 .enlaces-footer-abajo a {
     color: white;
     font-size: 1.1rem;
 }
 
-/*Meter margen entre los dos enlaces*/
 .enlaces-footer-abajo a {
     margin-left: 2.5rem;
 }
@@ -370,12 +338,13 @@ table {
 }
 
 .tabla th {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    color: #8da2ad;
 }
 
 .tabla td {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .boton-enlace {
@@ -406,13 +375,13 @@ table {
     align-items: center;
 }
 
-/*Formularios*/
+/*Estilos para los formularios*/
 
 .div-formulario {
     width: 80%;
     margin: 0 auto;
-    display: flex; /* Convertir el contenedor en un contenedor flexible */
-    justify-content: center; /* Centrar horizontalmente */
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -425,8 +394,8 @@ table {
 }
 
 form label {
-    font-size: 2.2rem; /* Ajusta el tamaño de la fuente de las etiquetas */
-    list-style-type: none; /* Elimina el punto negro de la izquierda */
+    font-size: 2.2rem;
+    list-style-type: none;
     color: #8da2ad;
 }
 
@@ -462,9 +431,6 @@ form input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
-    align-self: flex-end; /* El botón se alineará al final del formulario */
-    margin-left: 8rem;
-    margin-top: 1.5rem;
 }
 
 /*Boton para ir a la página de atras*/
@@ -495,11 +461,18 @@ form input[type="submit"] {
     justify-content: center;
     width: 50%;
     margin: 0 auto;
+    list-style-type: none;
+}
+
+.vista-detallada li {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .vista-detallada strong {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #8da2ad;
+    margin-right: 0.5rem;
 }
 
 

@@ -1,5 +1,6 @@
 from django.db import models
 
+#Modelo para la clase Empleado
 class Empleado(models.Model):
     dni = models.CharField(max_length=9, unique=True)
     nombre = models.CharField(max_length=50)
@@ -15,6 +16,7 @@ class Empleado(models.Model):
         verbose_name = "Empleado"
         ordering = ["-created"]
 
+#Modelo para la clase Orden de fabricacion
 class Orden_De_fabricacion(models.Model):
     ref_fabricacion = models.CharField(max_length=50, unique=True)
     nombre = models.CharField(max_length=50)
@@ -30,6 +32,7 @@ class Orden_De_fabricacion(models.Model):
         verbose_name = "Orden de fabricacion"
         ordering = ["-created"]
 
+#Modelo para la clase Equipo
 class Equipo(models.Model):
     modelo = models.CharField(max_length=50, unique=True)
     marca = models.CharField(max_length=50)
@@ -46,6 +49,7 @@ class Equipo(models.Model):
         verbose_name = "Equipo"
         ordering = ["-created"]
 
+#Modelo para la clase Proceso
 class Proceso(models.Model):
     codigo_proceso = models.CharField(max_length=10, unique=True)
     nombre_proceso = models.CharField(max_length=50)

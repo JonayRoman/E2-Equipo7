@@ -1,39 +1,38 @@
 {% extends 'base.html' %}
 {% block contenido %}
     <h2>Listado de equipos</h2>
-
     {% if equipos %}
-            <table class="tabla">
-                        <thead>
-                            <tr>
-                                <th>Modelo</th>
-                                <th>Marca</th>
-                                <th>Tipo</th>
-                               <th colspan=3><a href="{% url 'equipo_create' %}" class="boton-enlace">Crear un equipo</a></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for equipo in equipos %}
-                	            <tr>
-                                    <td>{{ equipo.modelo }}</td>
-                                    <td>{{ equipo.marca }}</td>
-                                    <td>{{ equipo.tipo }}</td>
-                                    <td><a href="{% url 'equipo_show' equipo.id %}" class="boton-enlace">Visualizar</a></td>
-                                    <td><a href="{% url 'equipos_update' equipo.id %}" class="boton-enlace">Modificar</a></td>
-                                    <td>
-                                        <form method="POST" action="{% url "equipos_delete" equipo.id%}">
-                                            {% csrf_token %}
-                                            <input class="boton-eliminar" type="submit" value="Eliminar">
-                                        </form>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-            </table>
-        {% else %}
-            <div class="nada-creado">
-                <a href="{% url 'equipo_create' %}" class="boton-enlace">Crear un equipo</a>
-                <p>No hay equipos creados.</p>
-            </div>
-        {% endif %}
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Tipo</th>
+                    <th colspan=3><a href="{% url 'equipo_create' %}" class="boton-enlace">Crear un equipo</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for equipo in equipos %}
+                    <tr>
+                        <td>{{ equipo.modelo }}</td>
+                        <td>{{ equipo.marca }}</td>
+                        <td>{{ equipo.tipo }}</td>
+                        <td><a href="{% url 'equipo_show' equipo.id %}" class="boton-enlace">Visualizar</a></td>
+                        <td><a href="{% url 'equipos_update' equipo.id %}" class="boton-enlace">Modificar</a></td>
+                        <td>
+                            <form method="POST" action="{% url "equipos_delete" equipo.id%}">
+                                {% csrf_token %}
+                                <input class="boton-eliminar" type="submit" value="Eliminar">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="nada-creado">
+            <a href="{% url 'equipo_create' %}" class="boton-enlace">Crear un equipo</a>
+            <p>No hay equipos creados.</p>
+        </div>
+    {% endif %}
 {% endblock %}

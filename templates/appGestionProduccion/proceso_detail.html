@@ -11,19 +11,8 @@
             <li><strong>Referencia:</strong> {{ proceso.referencia }}</li>
             <li><strong>Fecha de inicio del proceso:</strong> {{ proceso.fecha_inicio }}</li>
             <li><strong>Fecha final estimada:</strong> {{ proceso.fecha_fin }}</li>
+            <li><strong>Equipos asociados:</strong> <a href="{% url 'equipo_list' %}"><strong>Lista de Empleados</strong></a></li></li>
         </ul>
-        <h3>Empleados asociados</h3>
-        {% if empleados %}
-                <ul>
-                    {% for empleado in empleados %}
-                    	<li>
-                            <a href="{% url 'empleados_show_show' empleado.id %}">{{ empleado.nombre }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>No tiene empleados asociados.</p>
-            {% endif %}
     {% else %}
         <p>No existe este departamento.</p>
     {% endif %}
