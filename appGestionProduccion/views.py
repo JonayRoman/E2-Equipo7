@@ -5,7 +5,8 @@ from django.views import View
 from django.views.generic import ListView, DeleteView, UpdateView, DetailView
 
 from appGestionProduccion.forms import EmpleadoForm, ProcesoForm, EquipoForm
-from appGestionProduccion.models import Empleado, Proceso, Equipo
+from appGestionProduccion.models import Empleado, Proceso, Equipo, Orden_De_fabricacion
+
 
 #Lista de todos los empleados (se ven todos los atributos)
 class EmpleadoListView(ListView):
@@ -170,3 +171,9 @@ def show_Equipo(request, equipo_id):
 
 class EquipoDetailView(DetailView):
     model = Equipo
+
+#Lista de todas las ordenes (se ven todos los atributos)
+class OrdenListView(ListView):
+    model = Orden_De_fabricacion
+    template_name = "appGestionProduccion/orden_list.html"
+    context_object_name = "ordenes"

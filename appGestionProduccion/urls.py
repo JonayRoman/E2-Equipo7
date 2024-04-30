@@ -18,7 +18,7 @@ from django.urls import path
 from . import views
 from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView, ProcesoListView, \
     ProcesoCreateView, ProcesoDeleteView, ProcesoUpdateView, ProcesoDetailView, EquipoListView, EquipoCreateView, \
-    EquipoDeleteView, EquipoUpdateView, EquipoDetailView
+    EquipoDeleteView, EquipoUpdateView, EquipoDetailView, OrdenListView
 
 urlpatterns = [
     path('/empleados', EmpleadoListView.as_view(), name='empleado_list'),
@@ -36,4 +36,5 @@ urlpatterns = [
     path('/equipos/delete/<int:pk>', EquipoDeleteView.as_view(), name='equipos_delete'),
     path('/equipos/update/<int:pk>', EquipoUpdateView.as_view(), name='equipos_update'),
     path('/equipo/<int:pk>', EquipoDetailView.as_view(), name='equipo_show'),
+    path('/ordenes', OrdenListView.as_view(), name='orden_list'),
 ]

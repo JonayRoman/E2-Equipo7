@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block contenido %}
+    <h2>Listado de órdenes</h2>
+
+        {% if ordenes %}
+            <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>Referencia de fabricación</th>
+                                <th>Nombre</th>
+                                <th>Fecha inicio</th>
+                                <th>Fecha fin</th>
+                               <th>crear</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for orden_de_fabricacion in ordenes %}
+                	            <tr>
+                                    <td>{{ orden_de_fabricacion.ref_fabricacion}}</td>
+                                    <td>{{ orden_de_fabricacion.nombre}}</td>
+                                    <td>{{ orden_de_fabricacion.fecha_inicio}}</td>
+                                    <td>{{ orden_de_fabricacion.fecha_fin}}</td>
+                                    <td>modificar</td>
+                                    <td>
+                                       eliminar
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+            </table>
+
+        {% else %}
+            <div class="nada-creado">
+                <p>No hay órdenes creadas</p>
+            </div>
+        {% endif %}
+{% endblock %}
