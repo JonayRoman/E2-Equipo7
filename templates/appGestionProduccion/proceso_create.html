@@ -5,7 +5,7 @@
     </div>
     <h2>Nuevo Proceso</h2>
     <div class="div-formulario">
-        <form class="formulario_proceso" action="{% url 'proceso_create' %}" method="post">
+        <form class="formulario-proceso" action="{% url 'proceso_create' %}" method="post">
             {% csrf_token %}
             {{ formulario.errors }}
             {{ formulario.as_ul }}

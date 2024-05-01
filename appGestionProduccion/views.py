@@ -156,7 +156,7 @@ class EquipoUpdateView(UpdateView):
         return render(request, 'appGestionProduccion/equipo_update.html', context)
     # Llamada para procesar la actualización del equipo
     def post(self, request, pk):
-        equipo = Empleado.objects.get(id= pk)
+        equipo = Equipo.objects.get(id= pk)
         formulario = EquipoForm(request.POST, instance=equipo)
         if formulario.is_valid():
             formulario.save()

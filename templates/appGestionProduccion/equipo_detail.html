@@ -9,8 +9,8 @@
             <li><strong>Modelo del equipo:</strong> {{ equipo.modelo }}</li>
             <li><strong>Marca del equipo:</strong> {{ equipo.marca }}</li>
             <li><strong>tipo del equipo:</strong> {{ equipo.tipo }}</li>
-            <li><strong>Fecha de adquisición del equipo:</strong> {{ equipo.fecha_adquisicion }}</li>
-            <li><strong>Fecha de instalación del equipo:</strong> {{ equipo.fecha_instalacion }}</li>
+            <li><strong>Fecha de adquisición del equipo:</strong> {{ equipo.fecha_adquisicion|date:"d/m/Y" }}</li>
+            <li><strong>Fecha de instalación del equipo:</strong> {{ equipo.fecha_instalacion|date:"d/m/Y" }}</li>
         </ul>
     {% else %}
         <p>No existe este equipo.</p>

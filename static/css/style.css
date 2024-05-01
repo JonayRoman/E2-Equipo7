@@ -323,6 +323,40 @@ footer {
     margin-left: 2.5rem;
 }
 
+@media (min-width:768px) and (max-width:1278px) {
+
+   .div-footer-abajo {
+       height: 5.8rem;
+       display: flex;
+       flex-direction: column;
+   }
+
+  .div-footer-p {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+  }
+
+}
+
+@media (max-width:767px) {
+  .div-footer-abajo {
+      height: 5.8rem;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .div-footer-p {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .div-footer-p p {
+      font-size: 1rem;
+  }
+}
+
 /*Estilos para las tablas*/
 
 table {
@@ -386,10 +420,10 @@ table {
 }
 
 .formulario  {
-    width: 35%;
+    width: 45%;
 }
 
-.formulario_proceso {
+.formulario-proceso {
     width: 45%;
 }
 
@@ -431,6 +465,44 @@ form input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
+    margin-top: 1rem;
+}
+
+@media (min-width:768px) and (max-width:1278px) {
+    .formulario  {
+        width: 70%;
+    }
+
+    .formulario-proceso {
+        width: 74%;
+    }
+}
+
+@media (max-width:767px) {
+    .formulario-proceso  {
+        width: 100%;
+        margin-left: -2rem;
+    }
+
+    .formulario-proceso label {
+       font-size: 1.7rem;
+    }
+
+    .formulario-proceso select {
+        width: 11.2rem;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .formulario label {
+        font-size: 2rem;
+    }
+
+    form input {
+        width: 14rem;
+    }
 }
 
 /*Boton para ir a la página de atras*/
@@ -475,5 +547,17 @@ form input[type="submit"] {
     margin-right: 0.5rem;
 }
 
+@media (min-width:768px) and (max-width:1278px) {
+    .vista-detallada {
+        width: 72%;
+    }
+}
 
+@media (max-width:767px) {
+    .vista-detallada {
+        width: 100%;
+        margin-left: -1rem;
+    }
+
+}
 

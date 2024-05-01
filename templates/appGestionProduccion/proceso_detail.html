@@ -9,8 +9,8 @@
             <li><strong>Código del proceso:</strong> {{ proceso.codigo_proceso }}</li>
             <li><strong>Nombre del proceso:</strong> {{ proceso.nombre_proceso }}</li>
             <li><strong>Referencia:</strong> {{ proceso.referencia }}</li>
-            <li><strong>Fecha de inicio del proceso:</strong> {{ proceso.fecha_inicio }}</li>
-            <li><strong>Fecha final estimada:</strong> {{ proceso.fecha_fin }}</li>
+            <li><strong>Fecha de inicio del proceso:</strong> {{ proceso.fecha_inicio|date:"d/m/Y" }}</li>
+            <li><strong>Fecha final estimada:</strong> {{ proceso.fecha_fin|date:"d/m/Y" }}</li>
             <li><strong>Equipos asociados:</strong> <a href="{% url 'equipo_list' %}"><strong>Lista de Empleados</strong></a></li></li>
         </ul>
     {% else %}
