@@ -394,7 +394,7 @@ table {
 
 .formulario-boton-eliminar {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -414,6 +414,86 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width:768px) and (max-width:1278px) {
+    table {
+        width: 100%;
+    }
+
+    .tabla th,
+    .tabla td {
+        border: 1px solid #8da2ad;
+        padding: 1rem;
+        width: 25%;
+    }
+
+    .tabla th {
+        font-size: 1.4rem;
+    }
+
+    .tabla td {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:767px) {
+
+    table {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .tabla th,
+    .tabla td {
+        border: 1px solid #8da2ad;
+        padding: 0.5rem;
+        width: 20%;
+    }
+
+    .tabla th {
+        font-size: 1.2rem;
+        color: #8da2ad;
+    }
+
+    .tabla td {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .boton-enlace {
+        display: inline-block;
+        padding: 0.3rem 0.2rem;
+        background-color: #8da2ad;
+        color: #e3e5ea;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid black;
+        font-size: 1.1rem;
+    }
+
+    .formulario-boton-eliminar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario-boton-eliminar .boton-eliminar {
+        background-color: #8da2ad;
+        color: #e3e5ea;
+        font-size: 1.1rem;
+        padding: 0.3rem 0.2rem;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid black;
+        margin-bottom: 1rem;
+        width: 6rem;
+    }
+
+    #body-tabla-empleados .tabla th:nth-child(4), .tabla td:nth-child(4){
+        display: none;
+    }
 }
 
 /*Estilos para los formularios*/
@@ -565,6 +645,5 @@ form input[type="submit"] {
         width: 100%;
         margin-left: -1rem;
     }
-
 }
 

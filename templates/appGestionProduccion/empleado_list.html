@@ -13,7 +13,7 @@
                     <th colspan="2"><a href="{% url 'empleado_create' %}" class="boton-enlace">Crear un empleado</a></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="body-tabla-empleados">
                 {% for empleado in empleados %}
                     <tr>
                         <td>{{ empleado.dni }}</td>
