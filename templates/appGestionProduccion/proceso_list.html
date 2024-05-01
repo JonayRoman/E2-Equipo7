@@ -20,7 +20,7 @@
                         <td><a href="{% url 'procesos_show' proceso.id %}" class="boton-enlace">Visualizar</a></td>
                         <td><a href="{% url 'proceso_update' proceso.id %}" class="boton-enlace">Modificar</a></td>
                         <td>
-                            <form method="POST" action="{% url "proceso_delete" proceso.id%}">
+                            <form class="formulario-boton-eliminar" method="POST" action="{% url "proceso_delete" proceso.id%}">
                                 {% csrf_token %}
                                 <input class="boton-eliminar" type="submit" value="Eliminar">
                             </form>

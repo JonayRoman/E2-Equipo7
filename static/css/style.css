@@ -392,14 +392,21 @@ table {
      border: 1px solid black;
 }
 
-.boton-eliminar {
+.formulario-boton-eliminar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-boton-eliminar .boton-eliminar {
     background-color: #8da2ad;
     color: #e3e5ea;
     font-size: 1.5rem;
-    padding: 0.3rem 0.3rem;
+    padding: 0.3rem 0.8rem;
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
+    margin-bottom: 1rem;
 }
 
 .nada-creado {

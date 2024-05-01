@@ -20,7 +20,7 @@
                         <td><a href="{% url 'equipo_show' equipo.id %}" class="boton-enlace">Visualizar</a></td>
                         <td><a href="{% url 'equipos_update' equipo.id %}" class="boton-enlace">Modificar</a></td>
                         <td>
-                            <form method="POST" action="{% url "equipos_delete" equipo.id%}">
+                            <form class="formulario-boton-eliminar" method="POST" action="{% url "equipos_delete" equipo.id%}">
                                 {% csrf_token %}
                                 <input class="boton-eliminar" type="submit" value="Eliminar">
                             </form>
