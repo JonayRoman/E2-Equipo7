@@ -18,7 +18,7 @@ from django.urls import path
 from . import views
 from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView, ProcesoListView, \
     ProcesoCreateView, ProcesoDeleteView, ProcesoUpdateView, ProcesoDetailView, EquipoListView, EquipoCreateView, \
-    EquipoDeleteView, EquipoUpdateView, EquipoDetailView, OrdenListView
+    EquipoDeleteView, EquipoUpdateView, EquipoDetailView, OrdenListView, OrdenDetailView, OrdenCreateView, OrdenUpdateView, OrdenDeleteView
 
 urlpatterns = [
     #Urls de los empleados
@@ -41,4 +41,8 @@ urlpatterns = [
     path('/equipo/<int:pk>', EquipoDetailView.as_view(), name='equipo_show'), #url vista detallada equipos
     #Urls de las órdenes
     path('/ordenes', OrdenListView.as_view(), name='orden_list'), #url listar ordenes
+    path('ordenes/<int:pk>/', OrdenDetailView.as_view(), name='orden_detail'), #url vista detalles de ordenes de fabricacion
+    path('ordenes/create/', OrdenCreateView.as_view(), name='orden_create'), #url crear ordenes de fabricacion
+    path('ordenes/update/<int:pk>/', OrdenUpdateView.as_view(), name='orden_update'), #url modificar ordenes de fabricacion
+    path('ordenes/delete/<int:pk>/', OrdenDeleteView.as_view(), name='orden_delete'), #url borrar ordenes de fabricacion
 ]
