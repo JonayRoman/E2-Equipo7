@@ -105,18 +105,17 @@ class ProcesoUpdateView(UpdateView):
 #Ver el detalle de un proceso
 def show_Proceso(request, proceso_id):
     proceso = get_object_or_404(Proceso, id=proceso_id)
-    empleados = proceso.empleados_asignados.all()
-    return render(request, 'appGestionProduccion/proceso_detail.html', {'proceso':proceso, 'empleados':empleados})
+    equipo = proceso.equipos_asignados.all()
+    return render(request, 'appGestionProduccion/proceso_detail.html', {'proceso':proceso, 'equipos':equipos})
 
 #Ver el detalle de un proceso
 class ProcesoDetailView(DetailView):
     model = Proceso
 
-def show_empleado(request, empleado_id):
-    empleado = get_object_or_404(Empleado, id=empleado_id)
-    output = (f'Detalles del empleado: {empleado.id}, {empleado.nombre},'
-              f' Empleados :{[e.nombre for e in empleado.proceso_set.all()]}')
-    return HttpResponse(output)
+def show_empleado(request, proceso_id):
+    proceso = get_object_or_404(Proceso, pk=proceso_id)
+    empleados_asignados = proceso.empelados_asignados.all()
+    return render(request, 'empleado_list.html', {'empleados': procesos_asociados})
 
 #Listado de equipos
 class EquipoListView(ListView):
@@ -170,8 +169,10 @@ def show_Equipo(request, equipo_id):
     equipo = get_object_or_404(Proceso, id=equipo_id)
     return render(request, 'appGestionProduccion/equipo_detail.html', {'equipo':equipo})
 
+#Vista detallada del equipo utilizado en procesos
 class EquipoDetailView(DetailView):
     model = Equipo
+    success_url = reverse_lazy('index')
 
 #Lista de todas las ordenes (se ven todos los atributos)
 class OrdenListView(ListView):
