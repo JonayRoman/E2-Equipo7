@@ -20,7 +20,7 @@ class EquipoForm(forms.ModelForm):
         model = Equipo
         fields = '__all__'
 
-#Clase para los formularios del modelo Equipo
+#Clase para los formularios del modelo orden_De_fabricacion
 class OrdenForm(forms.ModelForm):
     class Meta:
         model = Orden_De_fabricacion

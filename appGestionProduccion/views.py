@@ -112,11 +112,6 @@ def show_Proceso(request, proceso_id):
 class ProcesoDetailView(DetailView):
     model = Proceso
 
-def show_empleado(request, proceso_id):
-    proceso = get_object_or_404(Proceso, pk=proceso_id)
-    empleados_asignados = proceso.empelados_asignados.all()
-    return render(request, 'empleado_list.html', {'empleados': procesos_asociados})
-
 #Listado de equipos
 class EquipoListView(ListView):
     model = Equipo
@@ -180,11 +175,6 @@ class OrdenListView(ListView):
     template_name = "appGestionProduccion/orden_list.html"
     context_object_name = "ordenes"
 
-#DetailView de Ordenes de Fabricacion
-class OrdenDetailView(DetailView):
-    model = Orden_De_fabricacion
-
-
 #Crear nueva Orden de Fabricacion
 class OrdenCreateView(View):
     def get(self, request):
@@ -200,19 +190,25 @@ class OrdenCreateView(View):
         return render(request, 'appGestionProduccion/orden_create.html', {'formulario': formulario})
     
 #Modificar una orden de fabricacion
-class OrdenUpdateView(View):
+class OrdenUpdateView(UpdateView):
+    model = Orden_De_fabricacion
     def get(self, request, pk):
-        orden = get_object_or_404(Orden_De_fabricacion, pk=pk)
-        formulario = OrdenForm(instance=orden)
-        context = {'formulario': formulario, 'orden': orden}
+        orden = Orden_De_fabricacion.objects.get(id=pk)
+        formulario = OrdenForm( instance=orden)
+        context = {
+            'formulario': formulario,
+            'orden': orden
+        }
         return render(request, 'appGestionProduccion/orden_update.html', context)
-
+    # Llamada para procesar la actualización del equipo
     def post(self, request, pk):
-        orden = get_object_or_404(Orden_De_fabricacion, pk=pk)
-        formulario = OrdenForm(data=request.POST, instance=orden)
+        orden = Orden_De_fabricacion.objects.get(id=pk)
+        formulario = OrdenForm(request.POST, instance=orden)
         if formulario.is_valid():
             formulario.save()
-            return redirect('orden_detail', pk=pk)  # Redirige a la vista de detalle de la orden actualizada
+            return redirect('orden_list')
+        else:
+            formulario = OrdenForm(instance=orden)
         return render(request, 'appGestionProduccion/orden_update.html', {'formulario': formulario})
     
 #Eliminar una orden de fabricacion

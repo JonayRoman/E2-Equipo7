@@ -14,13 +14,16 @@
             <li>
                 <strong>Equipo asignado:</strong> <a href="{% url 'equipo_show' proceso.equipo.id %}">{{ proceso.equipo }}</a>
             </li>
+            <li>
+                <strong>Empelados asignados:</strong>
+            </li>
         </ul>
         <h3>Empleados:</h3>
             {% if empleados %}
                 <ol>
                     {% for empleado in empleados %}
                     	<li>
-                            <a href="{% url 'empleados_show' empleado.id %}">{{ empleado.nombre }}</a>
+                            <a href="{% url 'empleado_show' empleado.id %}">{{ empleado.nombre }}</a>
                         </li>
                     {% endfor %}
 

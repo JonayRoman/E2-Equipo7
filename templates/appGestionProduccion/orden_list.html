@@ -9,7 +9,7 @@
                     <th>Nombre</th>
                     <th>Fecha de Inicio</th>
                     <th>Fecha de Finalización</th>
-                    <th>Crear Nueva Orden</th>
+                    <th colspan="2"><a href="{% url 'orden_create' %}" class="boton-enlace">Crear una orden</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -17,17 +17,23 @@
                     <tr>
                         <td>{{ orden_de_fabricacion.ref_fabricacion}}</td>
                         <td>{{ orden_de_fabricacion.nombre}}</td>
-                        <td>{{ orden_de_fabricacion.fecha_inicio}}</td>
-                        <td>{{ orden_de_fabricacion.fecha_fin}}</td>
-                        <td>modificar</td>
-                        <td>eliminar</td>
+                        <td>{{ orden_de_fabricacion.fecha_inicio|date:"d/m/Y"}}</td>
+                        <td>{{ orden_de_fabricacion.fecha_fin|date:"d/m/Y"}}</td>
+                        <td><a href="{% url 'orden_update' orden_de_fabricacion.id %}" class="boton-enlace">Modificar</a></td>
+                        <td>
+                            <form class="formulario-boton-eliminar" method="POST" action="{% url 'orden_delete' orden_de_fabricacion.id %}">
+                                {% csrf_token %}
+                                <input class="boton-eliminar" type="submit" value="Eliminar">
+                            </form>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     {% else %}
         <div class="nada-creado">
-            <p>No hay órdenes de fabricación creadas</p>
+            <a href="{% url 'orden_create' %}" class="boton-enlace">Crear una orden</a>
+            <p>No hay órdenes creados</p>
         </div>
     {% endif %}
 {% endblock %}

@@ -452,25 +452,25 @@ table {
     }
 
     .tabla th {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: #8da2ad;
     }
 
     .tabla td {
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .boton-enlace {
         display: inline-block;
-        padding: 0.3rem 0.2rem;
+        padding: 0.3rem 0.1rem;
         background-color: #8da2ad;
         color: #e3e5ea;
         text-align: center;
         border-radius: 4px;
         cursor: pointer;
         border: 1px solid black;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .formulario-boton-eliminar {
@@ -483,7 +483,7 @@ table {
         background-color: #8da2ad;
         color: #e3e5ea;
         font-size: 1.1rem;
-        padding: 0.3rem 0.2rem;
+        padding: 0.3rem 0.1rem;
         border-radius: 4px;
         cursor: pointer;
         border: 1px solid black;
@@ -491,9 +491,6 @@ table {
         width: 6rem;
     }
 
-    #body-tabla-empleados .tabla th:nth-child(4), .tabla td:nth-child(4){
-        display: none;
-    }
 }
 
 /*Estilos para los formularios*/

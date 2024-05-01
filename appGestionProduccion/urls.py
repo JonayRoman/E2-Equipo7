@@ -18,7 +18,8 @@ from django.urls import path
 from . import views
 from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView, ProcesoListView, \
     ProcesoCreateView, ProcesoDeleteView, ProcesoUpdateView, ProcesoDetailView, EquipoListView, EquipoCreateView, \
-    EquipoDeleteView, EquipoUpdateView, EquipoDetailView, OrdenListView, OrdenDetailView, OrdenCreateView, OrdenUpdateView, OrdenDeleteView
+    EquipoDeleteView, EquipoUpdateView, EquipoDetailView, OrdenListView, OrdenCreateView, \
+    OrdenUpdateView, OrdenDeleteView
 
 urlpatterns = [
     #Urls de los empleados
@@ -32,7 +33,6 @@ urlpatterns = [
     path('/proceos/delete/<int:pk>', ProcesoDeleteView.as_view(), name='proceso_delete'), #url borrar procesos
     path('/proeso/update/<int:pk>', ProcesoUpdateView.as_view(), name='proceso_update'), #url modificar procesos
     path('/proceso/<int:pk>', ProcesoDetailView.as_view(), name='procesos_show'), #url vista detallada procesos
-    path('/procesos/<int:empleado_id>', views.show_empleado, name="empleados_show"), #####MAAAAAAAAL######
     #Urls de los equipos
     path('/equipos', EquipoListView.as_view(), name='equipo_list'), #url listar equipos
     path('/equipos/create', EquipoCreateView.as_view(), name='equipo_create'), #url crear equipos
@@ -41,8 +41,7 @@ urlpatterns = [
     path('/equipo/<int:pk>', EquipoDetailView.as_view(), name='equipo_show'), #url vista detallada equipos
     #Urls de las órdenes
     path('/ordenes', OrdenListView.as_view(), name='orden_list'), #url listar ordenes
-    path('ordenes/<int:pk>/', OrdenDetailView.as_view(), name='orden_detail'), #url vista detalles de ordenes de fabricacion
     path('ordenes/create/', OrdenCreateView.as_view(), name='orden_create'), #url crear ordenes de fabricacion
-    path('ordenes/update/<int:pk>/', OrdenUpdateView.as_view(), name='orden_update'), #url modificar ordenes de fabricacion
+    path('/ordenes/update/<int:pk>', OrdenUpdateView.as_view(), name='orden_update'), #url modificar ordenes de fabricacion
     path('ordenes/delete/<int:pk>/', OrdenDeleteView.as_view(), name='orden_delete'), #url borrar ordenes de fabricacion
 ]
