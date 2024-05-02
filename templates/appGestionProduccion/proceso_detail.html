@@ -16,20 +16,25 @@
             </li>
             <li>
                 <strong>Empelados asignados:</strong>
+                {% if proceso.empleados_asignados %}
+                    {% for empleado in proceso.empleados_asignados.all  %}
+                        <p>{{ empleado.nombre }} ({{ empleado.dni }})</p>
+                    {% endfor %}
+                {% else %}
+                    <p>No tiene empleados asociados.</p>
+                {% endif %}
+            </li>
+            <li>
+                <strong>Órdenes asignadas:</strong>
+                {% if proceso.referencia_de_fabricacion %}
+                    {% for orden_de_fabricacion in proceso.referencia_de_fabricacion.all  %}
+                        <p>{{ orden_de_fabricacion.nombre}} ({{ orden_de_fabricacion.ref_fabricacion}})</p>
+                    {% endfor %}
+                {% else %}
+                    <p>No tiene órdenes asociadas.</p>
+                {% endif %}
             </li>
         </ul>
-        <h3>Empleados:</h3>
-            {% if empleados %}
-                <ol>
-                    {% for empleado in empleados %}
-                    	<li>
-                            <a href="{% url 'empleados_show' empleado.id %}">{{ empleado.nombre }}</a>
-                        </li>
-                    {% endfor %}
-                </ol>
-            {% else %}
-                <p>No tiene empleados asociadas.</p>
-            {% endif %}
     {% else %}
         <p>No existe este departamento.</p>
     {% endif %}
