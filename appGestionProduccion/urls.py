@@ -44,4 +44,8 @@ urlpatterns = [
     path('ordenes/create/', OrdenCreateView.as_view(), name='orden_create'), #url crear ordenes de fabricacion
     path('/ordenes/update/<int:pk>', OrdenUpdateView.as_view(), name='orden_update'), #url modificar ordenes de fabricacion
     path('ordenes/delete/<int:pk>/', OrdenDeleteView.as_view(), name='orden_delete'), #url borrar ordenes de fabricacion
+
+    ###########################
+
+    path('/empelados/<int:empleado_id>', views.show_empleado, name="empleados_show"),
 ]

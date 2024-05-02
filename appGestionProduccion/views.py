@@ -105,7 +105,7 @@ class ProcesoUpdateView(UpdateView):
 def show_Proceso(request, proceso_id):
     proceso = get_object_or_404(Proceso, id=proceso_id)
     equipo = proceso.equipos_asignados.all()
-    return render(request, 'appGestionProduccion/proceso_detail.html', {'proceso':proceso, 'equipos':equipos})
+    return render(request, 'appGestionProduccion/proceso_detail.html', {'proceso':proceso, 'equipos':equipo})
 
 #Ver el detalle de un proceso
 class ProcesoDetailView(DetailView):
@@ -214,4 +214,18 @@ class OrdenUpdateView(UpdateView):
 class OrdenDeleteView(DeleteView):
     model = Orden_De_fabricacion
     success_url = reverse_lazy('orden_list')
+
+#############################################################
+
+#4. ver los empleados asociados a un proceso
+
+def show_empleado(request, empleado_id):
+    empleado = get_object_or_404(Empleado, id=empleado_id)
+    output = (f'Detalles del empelado: {empleado.id}, {empleado.nombre},'
+              f' Empleados :{[e.nombre for e in empleado.proceso_set.all()]}')
+    return HttpResponse(output)
+
+
+
+
     

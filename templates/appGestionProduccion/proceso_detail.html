@@ -23,7 +23,7 @@
                 <ol>
                     {% for empleado in empleados %}
                     	<li>
-                            <a href="{% url 'empleado_show' empleado.id %}">{{ empleado.nombre }}</a>
+                            <a href="{% url 'empleados_show' empleado.id %}">{{ empleado.nombre }}</a>
                         </li>
                     {% endfor %}
                 </ol>
