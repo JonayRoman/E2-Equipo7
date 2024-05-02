@@ -7,7 +7,6 @@ from django.views.generic import ListView, DeleteView, UpdateView, DetailView
 from appGestionProduccion.forms import EmpleadoForm, ProcesoForm, EquipoForm, OrdenForm
 from appGestionProduccion.models import Empleado, Proceso, Equipo, Orden_De_fabricacion
 
-
 #Lista de todos los empleados (se ven todos los atributos)
 class EmpleadoListView(ListView):
     model = Empleado
@@ -200,7 +199,7 @@ class OrdenUpdateView(UpdateView):
             'orden': orden
         }
         return render(request, 'appGestionProduccion/orden_update.html', context)
-    # Llamada para procesar la actualización del equipo
+    # Llamada para procesar la actualización de la orden de fabricacion
     def post(self, request, pk):
         orden = Orden_De_fabricacion.objects.get(id=pk)
         formulario = OrdenForm(request.POST, instance=orden)
