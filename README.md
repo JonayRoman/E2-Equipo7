@@ -2,6 +2,8 @@
 ○ Enlace al repositorio de Github:
 https://github.com/JonayRoman/E2-Equipo7.git
 
+○ El archivo modeloER.png (imagen del esquema de la BBDD) se encuentra en repositorio "ficheros" del proyecto
+
 ○ Hemos implementado varias funcionalidades extra:
     -Creación de un cuarto modelo llamado Orden_De_fabricación.
     -Creación de varias funcionalidades para la gestión de equipos: creación, modificación visualización (listado) y baja.
