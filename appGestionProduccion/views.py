@@ -68,7 +68,7 @@ class ProcesoCreateView(View):
         return render(request, 'appGestionProduccion/proceso_create.html', context)
 
     def post(self, request):
-        formulario = ProcesoForm(data=request.POST)
+        formulario = ProcesoForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             return redirect('proceso_list')

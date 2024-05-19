@@ -59,6 +59,7 @@ class Proceso(models.Model):
     fecha_fin = models.DateField()
     referencia_de_fabricacion = models.ManyToManyField(Orden_De_fabricacion)
     empleados_asignados = models.ManyToManyField(Empleado)
+    archivo = models.FileField(upload_to='procesos/', null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, blank=True, null=True)
 

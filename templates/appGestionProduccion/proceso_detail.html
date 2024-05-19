@@ -34,6 +34,14 @@
                     <p>No tiene órdenes asociadas.</p>
                 {% endif %}
             </li>
+            <li>
+                <strong>Archivo adjunto:</strong>
+                {% if proceso.archivo %}
+                    <p><a href="{{ proceso.archivo.url }}" download>Detalles del proceso (Click para descargar)</a></p>
+                {% else %}
+                    <p>No hay archivo adjunto.</p>
+                {% endif %}
+            </li>
         </ul>
     {% else %}
         <p>No existe este departamento.</p>

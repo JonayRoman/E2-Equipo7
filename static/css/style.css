@@ -528,7 +528,7 @@ form input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 @media (min-width:768px) and (max-width:1278px) {
