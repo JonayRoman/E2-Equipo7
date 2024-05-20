@@ -392,6 +392,11 @@ table {
      border: 1px solid black;
 }
 
+.boton-enlace:hover{
+    background-color: #738691;
+    color: #ffffff;
+}
+
 .formulario-boton-eliminar {
     display: flex;
     flex-direction: column;
