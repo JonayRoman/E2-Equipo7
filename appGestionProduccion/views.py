@@ -59,6 +59,13 @@ class ProcesoListView(ListView):
     model = Proceso
     template_name = "appGestionProduccion/proceso_list.html"
     context_object_name = "procesos"
+    paginate_by = 4
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            return Proceso.objects.filter(nombre_proceso__icontains=query)
+        return Proceso.objects.all()
     
 #Crear un nuevo proceso
 class ProcesoCreateView(View):

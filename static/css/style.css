@@ -623,3 +623,32 @@ form input[type="submit"] {
     }
 }
 
+/*Estilos para el buscador de las listas*/
+
+.buscador-listas {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botones-buscador {
+    background-color: #8da2ad;
+    border-radius: 1.5rem;
+    border: 1px solid black;
+    color: #e3e5ea;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.botones-buscador a {
+    color: #e3e5ea;
+}
+
+.buscador-listas input[type="text"] {
+    padding: 0.3rem 0.8rem;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+}

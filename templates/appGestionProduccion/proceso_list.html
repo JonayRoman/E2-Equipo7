@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% block contenido %}
     <h2>Procesos activos</h2>
+    <div class="buscador-listas">
+        <form method="GET" action="{% url 'proceso_list' %}">
+            <input type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
+            <button class="botones-buscador" type="submit">Buscar</button>
+            <button class="botones-buscador" type="submit"><a href="{% url 'proceso_list' %}">Atrás </a></button>
+        </form>
+    </div>
     {% if procesos %}
         <table class="tabla">
             <thead>
@@ -29,6 +36,23 @@
                 {% endfor %}
             </tbody>
         </table>
+        <div class="pagination">
+            <span class="step-links">
+                {% if procesos.has_previous %}
+                    <a href="?page=1">&laquo; primera</a>
+                    <a href="?page={{ proceso.previous_page_number }}">anterior</a>
+                {% endif %}
+
+                <span class="current">
+                    Página {{ procesos.number }} de {{ procesos.paginator.num_pages }}.
+                </span>
+
+                {% if procesos.has_next %}
+                    <a href="?page={{ procesos.next_page_number }}">siguiente</a>
+                    <a href="?page={{ procesos.paginator.num_pages }}">última &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
     {% else %}
         <div class="nada-creado">
             <a href="{% url 'proceso_create' %}" class="boton-enlace">Crear un proceso</a>
