@@ -541,6 +541,11 @@ form input[type="submit"] {
     margin-top: 1.5rem;
 }
 
+form input[type="submit"]:hover{
+    background-color: #738691;
+    color: #ffffff;
+}
+
 @media (min-width:768px) and (max-width:1278px) {
     .formulario  {
         width: 70%;
@@ -660,6 +665,11 @@ form input[type="submit"] {
 
 .botones-buscador a {
     color: #e3e5ea;
+}
+
+.botones-buscador:hover{
+    background-color: #738691;
+    color: #ffffff;
 }
 
 
