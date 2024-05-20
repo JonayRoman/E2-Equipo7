@@ -598,6 +598,11 @@ form input[type="submit"] {
     margin: 3rem 3rem 0 0;
 }
 
+.boton-atras:hover{
+    background-color: #738691;
+    color: #ffffff;
+}
+
 /*Estilos para la vista detallada*/
 
 .vista-detallada {
@@ -656,6 +661,8 @@ form input[type="submit"] {
 .botones-buscador a {
     color: #e3e5ea;
 }
+
+
 
 .buscador-listas input[type="text"] {
     padding: 0.3rem 0.8rem;
