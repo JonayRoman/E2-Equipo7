@@ -409,6 +409,11 @@ table {
     margin-bottom: 1rem;
 }
 
+.formulario-boton-eliminar .boton-eliminar:hover {
+    background-color: #738691;
+    color: #ffffff;
+}
+
 .nada-creado {
     display: flex;
     flex-direction: column;
