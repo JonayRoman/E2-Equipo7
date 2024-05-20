@@ -1,13 +1,12 @@
 /*!--Autocalcular el correo electronico con el nombre y el apellido--!*/
-
 function generarEmail() {
-    /*!--Obtenemos los valores del formulario--!*/
-    const nombre = document.getElementById('nombre').ariaValueMax.trim().toLowerCase();
-    const apellido = document.getElementById('apellido').ariaValueMax.trim().toLowerCase();
-    
-    /*!--Generamos el correo electronico--!*/
-    const email = '${nombre}.${apellido}@ejemplo.com';
+    // Obtenemos los valores del formulario
+    const nombre = document.getElementById('nombre').value.trim().toLowerCase();
+    const apellido = document.getElementById('apellido').value.trim().toLowerCase();
 
-    /*!--Para mostrar el correo generado--!*/
-    document.getElementById('emailGenerado').textContent = `Correo electronico generado: ${email}`;
+    // Generamos el correo electrónico
+    const email = `${nombre}.${apellido}@ejemplo.com`;
+
+    // Mostramos el correo generado
+    document.getElementById('emailGenerado').textContent = `Correo electrónico generado: ${email}`;
 }
