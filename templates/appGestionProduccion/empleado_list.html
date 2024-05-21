@@ -40,22 +40,3 @@
     {% endif %}
 {% endblock %}
 
-{% block extra_js %}
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const nombreInput = document.getElementById('nombre');
-            const apellidoInput = document.getElementById('apellido');
-            const emailOutput = document.getElementById('emailGenerado');
-
-            function generarEmail() {
-                const nombre = nombreInput.value.trim().toLowerCase();
-                const apellido = apellidoInput.value.trim().toLowerCase();
-                const email = `${nombre}.${apellido}@ejemplo.com`;
-                emailOutput.textContent = `Correo electrónico generado: ${email}`;
-            }
-
-            nombreInput.addEventListener('input', generarEmail);
-            apellidoInput.addEventListener('input', generarEmail);
-        });
-    </script>
-{% endblock %}
