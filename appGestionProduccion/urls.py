@@ -15,7 +15,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from . import views
 from .views import EmpleadoListView, EmpleadoCreateView, EmpleadoDeleteView, EmpleadoUpdateView, ProcesoListView, \
     ProcesoCreateView, ProcesoDeleteView, ProcesoUpdateView, ProcesoDetailView, EquipoListView, EquipoCreateView, \
     EquipoDeleteView, EquipoUpdateView, EquipoDetailView, OrdenListView, OrdenCreateView, \
@@ -31,7 +30,7 @@ urlpatterns = [
     path('/procesos', ProcesoListView.as_view(), name='proceso_list'), #url listar procesos
     path('/proceso/create', ProcesoCreateView.as_view(), name='proceso_create'), #url crear procesos
     path('/proceos/delete/<int:pk>', ProcesoDeleteView.as_view(), name='proceso_delete'), #url borrar procesos
-    path('/proeso/update/<int:pk>', ProcesoUpdateView.as_view(), name='proceso_update'), #url modificar procesos
+    path('/proceso/update/<int:pk>', ProcesoUpdateView.as_view(), name='proceso_update'), #url modificar procesos
     path('/proceso/<int:pk>', ProcesoDetailView.as_view(), name='procesos_show'), #url vista detallada procesos
     #Urls de los equipos
     path('/equipos', EquipoListView.as_view(), name='equipo_list'), #url listar equipos
