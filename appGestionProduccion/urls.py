@@ -44,3 +44,4 @@ urlpatterns = [
     path('/ordenes/update/<int:pk>', OrdenUpdateView.as_view(), name='orden_update'), #url modificar ordenes de fabricacion
     path('ordenes/delete/<int:pk>/', OrdenDeleteView.as_view(), name='orden_delete'), #url borrar ordenes de fabricacion
 ]
+

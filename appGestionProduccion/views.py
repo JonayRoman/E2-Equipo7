@@ -97,8 +97,6 @@ class ProcesoDeleteView(DeleteView):
         # Obtener el proceso que se va a eliminar
         proceso = self.get_object()
 
-
-
 #Modificar un proceso
 class ProcesoUpdateView(UpdateView):
     model = Proceso
