@@ -6,7 +6,7 @@
             <form method="GET" action="{% url 'proceso_list' %}">
                 <input id="input-buscador" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
                 <button class="botones-buscador" type="submit">Buscar</button>
-                <button class="botones-buscador" type="submit"><a href="{% url 'proceso_list' %}">Atrás </a></button>
+                <button class="botones-buscador" type="submit"><a href="{% url 'proceso_list' %}">Atrás</a></button>
             </form>
         </div>
     </div>

@@ -1,8 +1,12 @@
+from venv import logger
+
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DeleteView, UpdateView, DetailView
+import logging
+from .logging import logger as creacion_proceso_logger
 
 from appGestionProduccion.forms import EmpleadoForm, ProcesoForm, EquipoForm, OrdenForm
 from appGestionProduccion.models import Empleado, Proceso, Equipo, Orden_De_fabricacion
@@ -59,7 +63,6 @@ class ProcesoListView(ListView):
     model = Proceso
     template_name = "appGestionProduccion/proceso_list.html"
     context_object_name = "procesos"
-    paginate_by = 4
 
     def get_queryset(self):
         query = self.request.GET.get('q')
@@ -72,19 +75,29 @@ class ProcesoCreateView(View):
     def get(self, request):
         formulario = ProcesoForm()
         context = {'formulario': formulario}
+        creacion_proceso_logger.info('Has entrado a la pagina para crear un proceso')
         return render(request, 'appGestionProduccion/proceso_create.html', context)
 
     def post(self, request):
         formulario = ProcesoForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
+            creacion_proceso_logger.info('Nuevo proceso creado')
             return redirect('proceso_list')
+        else:
+            creacion_proceso_logger.warning('Error al crear el proceso: %s', formulario.errors)
         return render(request, 'appGestionProduccion/proceso_create.html', {'formulario': formulario})
 
-#Eliminar un proceso
+# Eliminar un proceso
 class ProcesoDeleteView(DeleteView):
     model = Proceso
     success_url = reverse_lazy('proceso_list')
+
+    def delete(self, request, *args, **kwargs):
+        # Obtener el proceso que se va a eliminar
+        proceso = self.get_object()
+
+
 
 #Modificar un proceso
 class ProcesoUpdateView(UpdateView):
@@ -96,6 +109,7 @@ class ProcesoUpdateView(UpdateView):
             'formulario': formulario,
             'proceso': proceso
         }
+        creacion_proceso_logger.info('Has entrado a la pagina para modificar "%s".', proceso.nombre_proceso)
         return render(request, 'appGestionProduccion/proceso_update.html', context)
     # Llamada para procesar la actualización del proceso
     def post(self, request, pk):
@@ -222,11 +236,6 @@ class OrdenUpdateView(UpdateView):
 class OrdenDeleteView(DeleteView):
     model = Orden_De_fabricacion
     success_url = reverse_lazy('orden_list')
-
-
-
-
-
 
 
     
