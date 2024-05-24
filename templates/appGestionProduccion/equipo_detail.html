@@ -11,6 +11,14 @@
             <li><strong>tipo del equipo:</strong> {{ equipo.tipo }}</li>
             <li><strong>Fecha de adquisición del equipo:</strong> {{ equipo.fecha_adquisicion|date:"d/m/Y" }}</li>
             <li><strong>Fecha de instalación del equipo:</strong> {{ equipo.fecha_instalacion|date:"d/m/Y" }}</li>
+            <li>
+                <strong>Archivo adjunto:</strong>
+                {% if equipo.archivo %}
+                    <p><a href="{{ equipo.archivo.url }}" download>Manual de uso (Click para descargar)</a></p>
+                {% else %}
+                    <p>No hay archivo adjunto.</p>
+                {% endif %}
+            </li>
         </ul>
     {% else %}
         <p>No existe este equipo.</p>

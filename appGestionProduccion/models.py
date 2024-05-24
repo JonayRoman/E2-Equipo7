@@ -39,6 +39,7 @@ class Equipo(models.Model):
     tipo = models.CharField(max_length=50)
     fecha_adquisicion = models.DateField()
     fecha_instalacion = models.DateField()
+    archivo = models.FileField(upload_to='equipo/', null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, blank=True, null=True)
 

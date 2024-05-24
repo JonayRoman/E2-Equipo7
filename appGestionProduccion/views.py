@@ -8,7 +8,8 @@ from django.views.generic import ListView, DeleteView, UpdateView, DetailView
 import logging
 from .logging import logger as creacion_proceso_logger
 
-from appGestionProduccion.forms import EmpleadoForm, ProcesoForm, EquipoForm, OrdenForm
+from appGestionProduccion.forms import EmpleadoForm, ProcesoForm, EquipoForm, OrdenForm, EquipoUpdateForm, \
+    ProcesoUpdateForm
 from appGestionProduccion.models import Empleado, Proceso, Equipo, Orden_De_fabricacion
 
 #Lista de todos los empleados (se ven todos los atributos)
@@ -102,7 +103,7 @@ class ProcesoUpdateView(UpdateView):
     model = Proceso
     def get(self, request, pk):
         proceso = Proceso.objects.get(id=pk)
-        formulario = ProcesoForm( instance=proceso)
+        formulario = ProcesoUpdateForm( instance=proceso)
         context = {
             'formulario': formulario,
             'proceso': proceso
@@ -112,7 +113,7 @@ class ProcesoUpdateView(UpdateView):
     # Llamada para procesar la actualización del proceso
     def post(self, request, pk):
         proceso = Proceso.objects.get(id= pk)
-        formulario = ProcesoForm(request.POST, instance=proceso)
+        formulario = ProcesoUpdateForm(request.POST, instance=proceso)
         if formulario.is_valid():
             formulario.save()
             return redirect('proceso_list')
@@ -145,7 +146,7 @@ class EquipoCreateView(View):
         return render(request, 'appGestionProduccion/equipo_create.html', context)
 
     def post(self, request):
-        formulario = EquipoForm(data=request.POST)
+        formulario = EquipoForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             return redirect('equipo_list')
@@ -161,7 +162,7 @@ class EquipoUpdateView(UpdateView):
     model = Equipo
     def get(self, request, pk):
         equipo = Equipo.objects.get(id=pk)
-        formulario = EquipoForm( instance=equipo)
+        formulario = EquipoUpdateForm( instance=equipo)
         context = {
             'formulario': formulario,
             'empleado': equipo
@@ -170,7 +171,7 @@ class EquipoUpdateView(UpdateView):
     # Llamada para procesar la actualización del equipo
     def post(self, request, pk):
         equipo = Equipo.objects.get(id= pk)
-        formulario = EquipoForm(request.POST, instance=equipo)
+        formulario = EquipoUpdateForm(request.POST, instance=equipo)
         if formulario.is_valid():
             formulario.save()
             return redirect('equipo_list')

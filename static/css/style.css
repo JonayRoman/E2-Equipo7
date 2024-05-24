@@ -583,6 +583,12 @@ form input[type="submit"]:hover{
     }
 }
 
+/* Estilos para los errores del formulario */
+.formulario .errorlist {
+    color: red;
+    margin-bottom: 10px;
+}
+
 /*Boton para ir a la página de atras*/
 
 .div-atras {

@@ -5,7 +5,7 @@
     </div>
     <h2>Nuevo Equipo</h2>
     <div class="div-formulario">
-        <form class="formulario" action="{% url 'equipo_create' %}" method="post">
+        <form class="formulario" action="{% url 'equipo_create' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ formulario.errors }}
             {{ formulario.as_ul }}
