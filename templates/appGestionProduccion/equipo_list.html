@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
 {% block contenido %}
-    <h2>Listado de equipos</h2>
+    <div class="titulo-buscador">
+        <h2>Lista de equipos</h2>
+        <div class="buscador-listas">
+            <form method="GET" action="{% url 'equipo_list' %}">
+                <input id="input-buscador" type="text" name="q" placeholder="Buscar por modelo" value="{{ request.GET.q }}">
+                <button class="botones-buscador" type="submit">Buscar</button>
+                <button class="botones-buscador" type="submit"><a href="{% url 'equipo_list' %}">Atrás</a></button>
+            </form>
+        </div>
+    </div>
+     <div class="sin-resultado" style="display: none;">
+        <p>Lo sentimos, no hay equipos con el modelo <strong id="nombre-buscado"></strong>.</p>
+        <p>Si lo deseas, puedes crearlo mediante este botón:</p>
+        <a href="{% url 'equipo_create' %}" class="boton-enlace">Crear un equipo</a>
+    </div>
     {% if equipos %}
         <table class="tabla">
             <thead>

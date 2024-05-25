@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
 {% block contenido %}
-    <h2>Listado de empleados</h2>
+     <div class="titulo-buscador">
+        <h2>Listado de empelados</h2>
+        <div class="buscador-listas">
+            <form method="GET" action="{% url 'empleado_list' %}">
+                <input id="input-buscador" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
+                <button class="botones-buscador" type="submit">Buscar</button>
+                <button class="botones-buscador" type="submit"><a href="{% url 'empleado_list' %}">Atrás</a></button>
+            </form>
+        </div>
+    </div>
+     <div class="sin-resultado" style="display: none;">
+        <p>Lo sentimos, no hay empleados con el nombre <strong id="nombre-buscado"></strong>.</p>
+        <p>Si lo deseas, puedes crearlo mediante este botón:</p>
+        <a href="{% url 'empleado_create' %}" class="boton-enlace">Crear un empleado</a>
+    </div>
     {% if empleados %}
         <table class="tabla">
             <thead>

@@ -1,13 +1,7 @@
-2024-05-23 14:24:55,562 - creacion_proceso - INFO - Has entrado a la pagina para modificar "Embalaje final".
-2024-05-23 15:06:14,196 - creacion_proceso - INFO - Has entrado a la pagina para crear un proceso
-2024-05-23 15:06:21,034 - creacion_proceso - INFO - Nuevo proceso creado
-2024-05-23 15:06:28,528 - creacion_proceso - INFO - Has entrado a la pagina para modificar "dfsdg".
-2024-05-23 15:06:38,019 - creacion_proceso - INFO - Has entrado a la pagina para modificar "dfsdg".
-2024-05-23 15:06:44,571 - creacion_proceso - INFO - Has entrado a la pagina para modificar "Corte de acero".
-2024-05-23 15:06:59,149 - creacion_proceso - INFO - Has entrado a la pagina para modificar "dfsdg".
-2024-05-23 15:07:05,796 - creacion_proceso - INFO - Has entrado a la pagina para crear un proceso
-2024-05-23 15:07:24,304 - creacion_proceso - INFO - Nuevo proceso creado
-2024-05-23 15:07:37,140 - creacion_proceso - INFO - Has entrado a la pagina para modificar "fdgdfg".
-2024-05-23 16:01:48,855 - creacion_proceso - INFO - Has entrado a la pagina para modificar "fdgdfg".
-2024-05-23 16:02:05,923 - creacion_proceso - INFO - Has entrado a la pagina para modificar "Embalaje final".
-2024-05-24 15:08:54,998 - creacion_proceso - INFO - Has entrado a la pagina para modificar "fdgdfg".
+
+2024-05-25 11:13:04,831 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-25 11:13:13,517 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-25 11:13:22,294 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-25 11:13:29,535 - LOG - INFO - Nuevo empleado creado con el nombre "werwerwe".
+2024-05-25 11:13:31,625 - LOG - INFO - Has entrado a la pagina para modificar "werwerwe".
+2024-05-25 11:13:35,312 - LOG - INFO - Modificacion exitosa del empleado "werwerwe21212".

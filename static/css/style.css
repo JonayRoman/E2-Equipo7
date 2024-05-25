@@ -88,22 +88,6 @@ a {
 
 }
 
-.header-sesion {
-    display: flex;
-}
-
-.header-buscador {
-    display: flex;
-    height: 2.2rem;
-    margin-right: 1rem;
-}
-
-.header-sesion a {
-    color: black;
-    margin: 0 3rem 0 1rem;
-    font-size: 1.3rem;
-}
-
 .imagen-titulo {
     display: flex;
     flex-direction: row;
