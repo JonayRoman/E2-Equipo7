@@ -756,7 +756,7 @@ form input[type="submit"]:hover{
 /* CSS para los botones de aumentarTexto y disminuirTexto  */
 /* Los botones tienen un estilo similar al resto de botones del div para no romper con el estilo general */
 
-.zoomMasTexto {
+.zoomMasTexto, .zoomMenosTexto {
     background-color: #8da2ad;
     border-radius: 1.5rem;
     border: 1px solid black;
@@ -765,14 +765,11 @@ form input[type="submit"]:hover{
     font-size: 1.5rem;
     margin-left: 0.5rem;
 }
-.zoomMenosTexto {
-    background-color: #8da2ad;
-    border-radius: 1.5rem;
-    border: 1px solid black;
-    color: #e3e5ea;
-    padding: 0.3rem 0.8rem;
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
+
+@media (max-width:767px) {
+    .zoomMasTexto, .zoomMenosTexto {
+        font-size: 0.9rem;
+    }
 }
 
 /* Se añade diferente el hover, para dar más información  acerca de la funcionalidad de los mismos */
