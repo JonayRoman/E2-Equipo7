@@ -5,3 +5,13 @@
 2024-05-25 11:13:29,535 - LOG - INFO - Nuevo empleado creado con el nombre "werwerwe".
 2024-05-25 11:13:31,625 - LOG - INFO - Has entrado a la pagina para modificar "werwerwe".
 2024-05-25 11:13:35,312 - LOG - INFO - Modificacion exitosa del empleado "werwerwe21212".
+2024-05-26 12:27:27,680 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-26 12:39:53,891 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-26 12:40:06,019 - LOG - WARNING - Error al crear el equipo con modelo: "a".
+2024-05-26 12:40:15,299 - LOG - WARNING - Error al crear el equipo con modelo: "a".
+2024-05-26 12:44:16,026 - LOG - WARNING - Error al crear el equipo con modelo: "a".
+2024-05-26 12:44:17,588 - LOG - WARNING - Error al crear el equipo con modelo: "a".
+2024-05-26 12:44:18,078 - LOG - WARNING - Error al crear el equipo con modelo: "a".
+2024-05-26 12:44:24,913 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-26 12:45:12,322 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-26 12:45:43,498 - LOG - INFO - Has entrado a la pagina para crear un equipo

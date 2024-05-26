@@ -1,40 +1,46 @@
 /*!--Validar campos del formulario--!*/
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const marca = document.getElementById('id_marca');
-    const modelo = document.getElementById('id_modelo');
-    const tipo = document.getElementById('id_tipo');
+    const marca = document.getElementById('marca');
+    const modelo = document.getElementById('modelo');
+    const tipo = document.getElementById('tipo');
+    const message = document.getElementById('message');  // Añadido aquí
+
+    const showMessage = (msg) => {
+        message.innerText = msg;
+    };
 
     marca.addEventListener('blur', (event) => {
         const value = marca.value;
 
         if (value.length > 3) {
-            console.log('La longitud del texto es mayor a 3 caracteres.');
+            showMessage('La longitud del texto es mayor a 3 caracteres.');
         } else {
-            console.log('La longitud del texto es 3 o menos caracteres.');
+            showMessage('La longitud del texto es 3 o menos caracteres.');
         }
     });
 
     modelo.addEventListener('blur', (event) => {
         const value = modelo.value;
-    
+
         if (value.length > 3) {
-            console.log('La longitud del texto es mayor a 3 caracteres.');
+            showMessage('La longitud del texto es mayor a 3 caracteres.');
         } else {
-            console.log('La longitud del texto es 3 o menos caracteres.');
+            showMessage('La longitud del texto es 3 o menos caracteres.');
         }
     });
 
     tipo.addEventListener('blur', (event) => {
         const value = tipo.value;
-    
+
         if (value.length > 3) {
-            console.log('La longitud del texto es mayor a 3 caracteres.');
+            showMessage('La longitud del texto es mayor a 3 caracteres.');
         } else {
-            console.log('La longitud del texto es 3 o menos caracteres.');
+            showMessage('La longitud del texto es 3 o menos caracteres.');
         }
     });
 });
+
 
 
 
