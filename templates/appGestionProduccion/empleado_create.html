@@ -4,6 +4,7 @@
         <a href="{% url 'empleado_list' %}" class="boton-atras"> <i class="fas fa-arrow-left"></i> Atrás </a>
     </div>
     <h2>Nuevo Empleado</h2>
+    <div class="div-validar"></div>
     <div class="div-formulario">
         <form class="formulario" action="{% url 'empleado_create' %}" method="post">
             {% csrf_token %}
@@ -12,5 +13,4 @@
             <input type="submit" value="Nuevo empleado"/>
         </form>
     </div>
-
 {% endblock %}

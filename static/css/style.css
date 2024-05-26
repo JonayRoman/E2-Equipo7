@@ -120,7 +120,6 @@ a {
     align-items: center;
 }
 
-
 /*Enlaces de navegacion*/
 
 .contenedor-navegacion {
@@ -781,13 +780,18 @@ form input[type="submit"]:hover{
 .zoomMasTexto:hover {
     background-color: #738691;
     color: #ffffff;
-    cursor: zoom-in; /* Cursor de lupa zoom-in visualiza que se va a realizar mas zoom, ayuda al usuario final*/
-
+    cursor: zoom-in;
 } 
 .zoomMenosTexto:hover {
     background-color: #738691;
     color: #ffffff;
-    cursor: zoom-out;  /* Cursor de lupa zoom-our visualiza que se va a disminuir el zoom, ayuda al usuario final*/
-
+    cursor: zoom-out;
 }
 
+/* Estilos para los mensajes de valizacion de los formularios de creacion */
+
+.div-validar {
+    font-size: 1.7rem;
+    color: red;
+    text-align: center;
+}
