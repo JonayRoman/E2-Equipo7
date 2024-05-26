@@ -7,6 +7,8 @@
                 <input id="input-buscador" type="text" name="q" placeholder="Buscar por modelo" value="{{ request.GET.q }}">
                 <button class="botones-buscador" type="submit">Buscar</button>
                 <button class="botones-buscador" type="submit"><a href="{% url 'equipo_list' %}">Atrás</a></button>
+                <button id="aumentarTexto" class="zoomMasTexto">+</button>
+                <button id="disminuirTexto" class="zoomMenosTexto">-</button>
             </form>
         </div>
     </div>
