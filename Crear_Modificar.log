@@ -112,3 +112,6 @@
 2024-05-26 23:19:51,410 - LOG - INFO - Has entrado a la pagina para crear un empleado
 2024-05-26 23:20:33,110 - LOG - WARNING - Error al crear el empleado: "sfsdf".
 2024-05-26 23:20:45,554 - LOG - INFO - Nuevo empleado creado con el nombre "sfsdf".
+2024-05-27 09:59:20,518 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 10:01:36,729 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 10:01:58,569 - LOG - INFO - Has entrado a la pagina para crear una orden
