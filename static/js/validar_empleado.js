@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
      telefono.addEventListener('blur', (event) => {
         const value = telefono.value;
         if (value.length !== 9 && value.length !== 0) {
-            showMessage('La longitud del DNI debe ser igual a 9');
+            showMessage('La longitud del telefono debe ser igual a 9');
         } else {
             divValidar.innerHTML = '';
         }

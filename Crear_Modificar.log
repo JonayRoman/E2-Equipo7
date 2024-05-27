@@ -129,3 +129,45 @@
 2024-05-27 11:07:24,142 - LOG - INFO - Has entrado a la pagina para crear un proceso
 2024-05-27 11:12:23,786 - LOG - INFO - Has entrado a la pagina para crear un proceso
 2024-05-27 11:12:31,194 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 19:14:02,775 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-27 19:15:33,529 - LOG - INFO - Nuevo empleado creado con el nombre "Caros".
+2024-05-27 19:15:37,410 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-27 19:15:51,431 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-27 19:15:52,371 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-27 19:16:27,058 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-27 19:17:47,061 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-27 19:18:09,335 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 19:18:17,570 - LOG - WARNING - Error al crear el equipo con modelo: "sdgdfg".
+2024-05-27 19:18:29,728 - LOG - WARNING - Error al crear el equipo con modelo: "sdgdfg".
+2024-05-27 19:18:52,719 - LOG - INFO - Nuevo equipo creado cuyo modelo es "weqwe".
+2024-05-27 19:19:25,750 - LOG - INFO - Has entrado a la pagina para crear una orden
+2024-05-27 19:20:07,736 - LOG - INFO - Has entrado a la pagina para crear un empleado
+2024-05-27 19:21:31,385 - LOG - INFO - Nuevo empleado creado con el nombre "wrwer".
+2024-05-27 19:23:35,615 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:24:47,797 - LOG - INFO - Nuevo proceso creado con el nombre "Embalaje final".
+2024-05-27 19:25:52,533 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:26:44,854 - LOG - INFO - Nuevo proceso creado con el nombre "Inspección dimensional".
+2024-05-27 19:27:47,831 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:28:36,044 - LOG - INFO - Nuevo proceso creado con el nombre "Soldadura de componentes".
+2024-05-27 19:31:55,429 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 19:32:28,029 - LOG - INFO - Nuevo equipo creado cuyo modelo es "mod001".
+2024-05-27 19:32:30,238 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 19:33:06,393 - LOG - INFO - Nuevo equipo creado cuyo modelo es "mod002".
+2024-05-27 19:33:07,853 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 19:33:43,786 - LOG - INFO - Nuevo equipo creado cuyo modelo es "mod003".
+2024-05-27 19:33:47,254 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 19:34:35,745 - LOG - INFO - Nuevo equipo creado cuyo modelo es "mod004".
+2024-05-27 19:34:52,203 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-27 19:35:28,401 - LOG - INFO - Nuevo equipo creado cuyo modelo es "mod005".
+2024-05-27 19:35:38,861 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:36:05,092 - LOG - INFO - Nuevo proceso creado con el nombre "Soldadura de componentes".
+2024-05-27 19:36:11,806 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:37:47,395 - LOG - INFO - Nuevo proceso creado con el nombre "Corte de acero".
+2024-05-27 19:37:50,792 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:38:40,821 - LOG - INFO - Nuevo proceso creado con el nombre "Inspección dimensional".
+2024-05-27 19:38:42,558 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:39:42,016 - LOG - INFO - Nuevo proceso creado con el nombre "Embalaje final".
+2024-05-27 19:39:44,030 - LOG - INFO - Has entrado a la pagina para crear un proceso
+2024-05-27 19:40:21,450 - LOG - INFO - Nuevo proceso creado con el nombre "Embalaje final".
+2024-05-27 19:40:23,335 - LOG - INFO - Has entrado a la pagina para modificar "Embalaje final".
+2024-05-27 19:41:04,067 - LOG - INFO - modificado con exito el proceso "Recubrimiento de pintura".
