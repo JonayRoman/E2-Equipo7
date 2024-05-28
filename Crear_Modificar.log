@@ -171,3 +171,7 @@
 2024-05-27 19:40:21,450 - LOG - INFO - Nuevo proceso creado con el nombre "Embalaje final".
 2024-05-27 19:40:23,335 - LOG - INFO - Has entrado a la pagina para modificar "Embalaje final".
 2024-05-27 19:41:04,067 - LOG - INFO - modificado con exito el proceso "Recubrimiento de pintura".
+2024-05-28 13:21:36,589 - LOG - INFO - Has entrado a la pagina para crear un equipo
+2024-05-28 13:22:03,202 - LOG - INFO - Nuevo equipo creado cuyo modelo es "ewasda".
+2024-05-28 13:30:05,587 - LOG - INFO - Has entrado a la pagina para modificar "Caros".
+2024-05-28 13:30:10,597 - LOG - INFO - Modificacion exitosa del empleado "Carlos".
