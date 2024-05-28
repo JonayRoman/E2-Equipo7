@@ -5,7 +5,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
   });
 const apiEndpoint = params.page ? `${API_URL_EMPLEADOS}?page=${params.page}` : API_URL_EMPLEADOS
 // ------------------------------------------- PROVEEDORES LISTVIEW -------------------------------------------
-//console.log(params.page);
+console.log(params.page);
 fetch(apiEndpoint)
     .then(response => response.json())
     .then( json => {
